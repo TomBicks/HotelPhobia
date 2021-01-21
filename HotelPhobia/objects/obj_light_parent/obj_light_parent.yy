@@ -1,14 +1,23 @@
 {
-    "id": "ca00e1a0-5d3c-457c-b01b-4615bc78d479",
+    "id": "eaeb93a3-4839-41a6-bdaf-6826e80a1402",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_light_switch",
+    "name": "obj_light_parent",
     "eventList": [
-        
+        {
+            "id": "925c78bf-fcf0-443e-bf9e-27d2b4138aa8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "eaeb93a3-4839-41a6-bdaf-6826e80a1402"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "f44c8fdb-4c4f-42d9-8bcd-d928b5a804b0",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -24,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "3781a4f0-849b-4188-91b8-862cfead6109",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

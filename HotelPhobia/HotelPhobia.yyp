@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "08efca61-e1eb-4329-b28c-2060bd34bb7d",
+            "Value": {
+                "id": "fa183b99-28a9-4454-a93f-c6aa37cc1932",
+                "resourcePath": "shaders\\sha_interact_outline\\sha_interact_outline.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "2482b8cd-62ec-4c34-9369-e76eb03112ee",
             "Value": {
                 "id": "a12a6651-3dd2-412e-adc6-eeef6bb069ec",
@@ -52,6 +60,14 @@
                 "id": "e3253f85-dfc2-4675-a304-2acf8f824d0a",
                 "resourcePath": "views\\307e51f2-0ff9-4670-abce-0d3cec12a3f9.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3781a4f0-849b-4188-91b8-862cfead6109",
+            "Value": {
+                "id": "c96d409e-a9e4-49ee-be98-e079d2627738",
+                "resourcePath": "sprites\\spr_light_switch\\spr_light_switch.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -180,6 +196,14 @@
                 "id": "aef208a6-d0a7-4b35-84ca-45d740247487",
                 "resourcePath": "views\\d183fe9c-72ff-45f3-82b4-b1d40a8f4e83.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "eaeb93a3-4839-41a6-bdaf-6826e80a1402",
+            "Value": {
+                "id": "ed123757-7c53-4db9-9c47-59be5462baff",
+                "resourcePath": "objects\\obj_light_parent\\obj_light_parent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
