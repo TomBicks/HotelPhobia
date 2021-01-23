@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "12065311-649f-406d-b77b-7aebacc503b4",
+            "Value": {
+                "id": "b7bb5995-c6ba-4e39-a885-c5de53a6e884",
+                "resourcePath": "sounds\\snd_switch_click\\snd_switch_click.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "2482b8cd-62ec-4c34-9369-e76eb03112ee",
             "Value": {
                 "id": "a12a6651-3dd2-412e-adc6-eeef6bb069ec",
@@ -106,7 +114,7 @@
             "Key": "3ade27e1-af7f-469b-9717-3905fdbb17ab",
             "Value": {
                 "id": "13e81cdf-e240-4228-96b9-48731a70791b",
-                "resourcePath": "rooms\\room0\\room0.yy",
+                "resourcePath": "rooms\\rm_light_switch_test\\rm_light_switch_test.yy",
                 "resourceType": "GMRoom"
             }
         },
