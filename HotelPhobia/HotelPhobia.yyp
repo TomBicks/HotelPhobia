@@ -31,14 +31,6 @@
     },
     "resources": [
         {
-            "Key": "00493d09-ea90-47a0-a887-bc360ed92b12",
-            "Value": {
-                "id": "7851eb59-03c1-4b1e-98d2-842e3c483f06",
-                "resourcePath": "views\\00493d09-ea90-47a0-a887-bc360ed92b12.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "032d0c79-c7a3-4cb5-b97e-d851392f5359",
             "Value": {
                 "id": "f19d8451-cc10-4d04-a5dc-539e6232a8d9",
@@ -52,22 +44,6 @@
                 "id": "fa183b99-28a9-4454-a93f-c6aa37cc1932",
                 "resourcePath": "shaders\\sha_interact_outline\\sha_interact_outline.yy",
                 "resourceType": "GMShader"
-            }
-        },
-        {
-            "Key": "0b41839a-5dd5-4e56-aaa8-29aaad0aafa6",
-            "Value": {
-                "id": "473e9de1-4957-4857-a789-d93ad5201acb",
-                "resourcePath": "shaders\\sha_interact_outline_white\\sha_interact_outline_white.yy",
-                "resourceType": "GMShader"
-            }
-        },
-        {
-            "Key": "102ab08d-7ef3-4eff-adbb-93e15ba08901",
-            "Value": {
-                "id": "d7f181a5-e221-4e4c-904a-af27bd6034b8",
-                "resourcePath": "scripts\\test_script\\test_script.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -108,14 +84,6 @@
                 "id": "13e81cdf-e240-4228-96b9-48731a70791b",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
-            }
-        },
-        {
-            "Key": "3ccff371-57d9-45ff-aab8-3c3c35834f62",
-            "Value": {
-                "id": "06032f8c-bf21-499f-b093-684982d8a234",
-                "resourcePath": "sprites\\spr_light\\spr_light.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -180,14 +148,6 @@
                 "id": "0207937c-75bc-405b-ad51-981a08eb626e",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
-            }
-        },
-        {
-            "Key": "b747732d-9d0b-4fea-a74f-d8d1e206456b",
-            "Value": {
-                "id": "9f7cf0bc-f3d3-4953-9c41-acc9e2b1ebef",
-                "resourcePath": "scripts\\scr_light_switch\\scr_light_switch.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -288,8 +248,7 @@
         }
     ],
     "script_order": [
-        "b747732d-9d0b-4fea-a74f-d8d1e206456b",
-        "102ab08d-7ef3-4eff-adbb-93e15ba08901"
+        
     ],
     "tutorial": ""
 }
