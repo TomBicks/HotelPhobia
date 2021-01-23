@@ -1,0 +1,1 @@
+light_on = true;
