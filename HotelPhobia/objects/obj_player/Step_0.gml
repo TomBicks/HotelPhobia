@@ -1,10 +1,14 @@
 /// @description Insert description here
-// Check for interactable objects nearby
+
+#region // Check for interactable objects nearby
 var nearby_interact = instance_nearest(x, y, obj_interact_parent);
 if(distance_to_object(nearby_interact) < interact_range) {
 	with (obj_interact_parent) {
 		if(self == nearby_interact) {
 			nearby = true;
+			if(keyboard_check_pressed(vk_up)) {
+				script_execute(behaviour);	
+			}
 		} else {
 			nearby = false;
 		}
@@ -12,3 +16,4 @@ if(distance_to_object(nearby_interact) < interact_range) {
 } else {
 	nearby_interact.nearby = false;
 }
+#endregion
