@@ -87,11 +87,27 @@
             }
         },
         {
+            "Key": "260f9fec-a429-402d-8343-373ac726b3b2",
+            "Value": {
+                "id": "d8429824-a2cd-4907-a528-df9c0e79cb5f",
+                "resourcePath": "sounds\\snd_door_close\\snd_door_close.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "307e51f2-0ff9-4670-abce-0d3cec12a3f9",
             "Value": {
                 "id": "e3253f85-dfc2-4675-a304-2acf8f824d0a",
                 "resourcePath": "views\\307e51f2-0ff9-4670-abce-0d3cec12a3f9.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "33b1817b-284f-491f-b892-db5411bbff05",
+            "Value": {
+                "id": "7816e3b0-84cb-464c-9771-f7e3419a9636",
+                "resourcePath": "sounds\\snd_door_open\\snd_door_open.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -183,6 +199,14 @@
             }
         },
         {
+            "Key": "8b4e150b-da48-4cd1-baee-3294e598c092",
+            "Value": {
+                "id": "4955a7e6-7229-46d4-86d9-5572fa22b041",
+                "resourcePath": "sounds\\snd_door_locked\\snd_door_locked.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8d048a85-7263-43f7-891a-7f4f9f933c1d",
             "Value": {
                 "id": "44785dd4-218d-4e24-b32b-0d4eb143850b",
@@ -220,6 +244,14 @@
                 "id": "7e0275be-bec2-4a40-b1ed-2ca937f5495a",
                 "resourcePath": "objects\\obj_door_back\\obj_door_back.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b5ebe7ce-9991-45f5-a7e6-4e31f482dfbb",
+            "Value": {
+                "id": "8be3a15c-6ae5-4ece-be05-102e9dbb9373",
+                "resourcePath": "scripts\\scr_door\\scr_door.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -337,6 +369,7 @@
     ],
     "script_order": [
         "b747732d-9d0b-4fea-a74f-d8d1e206456b",
+        "b5ebe7ce-9991-45f5-a7e6-4e31f482dfbb",
         "102ab08d-7ef3-4eff-adbb-93e15ba08901"
     ],
     "tutorial": ""
