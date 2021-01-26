@@ -6,12 +6,16 @@ show_inventory = false; //Should the inventory be shown right now?
 //Using a DS Grid to store items (ds_grid_sort)
 /*Stored values (a row is a single item) are: 
  - ID (to sort lowest to highest)
- - variable name (the string to be used in code when using item on an object in the game, as well as checking for combining)
  - item count
  - item description
- - items it could be combined with (e.g. photo_piece1 would have here "photo_piece2,photo_piece3,photo_piece4")
+ - items it could be combined with (e.g. inv_items.photo_piece1 would have here 
+   "inv_items.photo_piece2,inv_items.photo_piece3,inv_items.photo_piece4", which is effectively "12,13,14" as it uses ids
 */
-ds_inventory = ds_grid_create(5, 10);
+ds_inventory = ds_grid_create(4, 5);
+
+//Fill grid with values of 99, as this will be the value to mean a cell is empty
+//This is so we can sort in ascending order properly
+ds_grid_clear(ds_inventory, 99);
 
 /*ADDENDUM!! The ID can be done through an enumerator, for clarities sake; for example, can = 1, crowbar = 2, 
 key = 3, etc. What this means is I can type the "name" of the item, but it still reads to the code as 1, 2, 3 etc.*/

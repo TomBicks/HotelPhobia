@@ -1,5 +1,5 @@
-/// @function							scr_inv_add_item();
-/// @param {integer}	item_id			The id of the item to be added (can be an enum field)
+/// @function							scr_inv_add_item(item_id, item_amount);
+/// @param {integer}	item_id			The ID of the item to be added (can be an enum field)
 /// @param {string}		item_amount		The amount of the item to be added
 /// @description						Adds an item to the inventory, then sorts it by ID
 
@@ -21,26 +21,28 @@ for(i = 0; i < height; i++) {
 	//If row found that matches the given item_id, the item is already in the inventory
 	//This means we only need to increase the amount of the item by item_amount
 	if(cell == item_id) {
-		ds_inventory[# 3, i] += item_amount;
+		ds_inventory[# 1, i] += item_amount;
 		break;
 	}
 	
-	//If row found that is undefined, means item is not in inventory
-	//This means we add the item to the first undefined row we just found
-	if(is_undefined(cell)) {
+	//If row found that is 99, means item is not in inventory
+	//This means we add the item to the first blank row we just found
+	if(cell == 99) {
+		//Add item ID
+		ds_inventory[# 0, i] = item_id;
 		
+		//Add item amount
+		ds_inventory[# 1, i] = item_amount;
+		
+		//Add item description
+		ds_inventory[# 2, i] = scr_inv_find_description(item_id);
+		
+		//Add item combination list (if any)
+		ds_inventory[# 3, i] = scr_inv_find_combinations(item_id);
+		
+		//Sort the grid's rows by ID so the item is in the correct position, in descending order
+		ds_grid_sort(ds_inventory, 0, true);
+		break;
 	}
 }
 #endregion
-
-
-/*NOTE!! Basically what I should do here is have a for loop iterate through everything.
-If it finds the id that matches the id provided (item_id), then it increases the count,
-because the item already exists in the inventory. If it finds an empty row before then,
-implying the item is not in the inventory, then it adds it to a new row and sorts it.
-There is no need to sort if no new item is added however, but if only the count is increased.*/
-
-//Set the first row that is empty to the value of the new item
-
-//Sort the grid's rows by ID to reflect the ordering of items
-ds_grid_sort(ds_inventory, 1, true);
