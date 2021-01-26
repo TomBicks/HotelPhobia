@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "2dcbcefa-2262-4724-a67e-2f5908bd037e",
+            "Value": {
+                "id": "473d8453-6a95-4324-8a8e-ee47bd9ef6b6",
+                "resourcePath": "rooms\\rm_inventory_test\\rm_inventory_test.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "307e51f2-0ff9-4670-abce-0d3cec12a3f9",
             "Value": {
                 "id": "e3253f85-dfc2-4675-a304-2acf8f824d0a",
@@ -124,6 +132,14 @@
                 "id": "06032f8c-bf21-499f-b093-684982d8a234",
                 "resourcePath": "sprites\\spr_light\\spr_light.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "410fe962-ab9d-461d-9ab5-f1abcec30d5d",
+            "Value": {
+                "id": "1cfb1d0b-ccee-4668-89a7-30f330187a4f",
+                "resourcePath": "views\\410fe962-ab9d-461d-9ab5-f1abcec30d5d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -211,6 +227,14 @@
             "Value": {
                 "id": "9f7cf0bc-f3d3-4953-9c41-acc9e2b1ebef",
                 "resourcePath": "scripts\\scr_light_switch\\scr_light_switch.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bb42493d-4289-454e-97b0-080cc984fb03",
+            "Value": {
+                "id": "e9af6e5e-5cae-404b-bc71-0dc563449bff",
+                "resourcePath": "scripts\\scr_inv_add_item\\scr_inv_add_item.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -313,6 +337,7 @@
     ],
     "script_order": [
         "b747732d-9d0b-4fea-a74f-d8d1e206456b",
+        "bb42493d-4289-454e-97b0-080cc984fb03",
         "102ab08d-7ef3-4eff-adbb-93e15ba08901"
     ],
     "tutorial": ""
