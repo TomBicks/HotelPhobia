@@ -27,7 +27,7 @@ for(i = 0; i < height; i++) {
 	
 	//If row found that is 99, means item is not in inventory
 	//This means we add the item to the first blank row we just found
-	if(cell == 99) {
+	if(cell == inv_items.empty) {
 		//Add item ID
 		ds_inventory[# 0, i] = item_id;
 		

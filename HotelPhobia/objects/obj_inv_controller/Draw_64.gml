@@ -2,12 +2,12 @@
 //Do not run code and show inventory if show_inventory variable is false
 if(!show_inventory) { exit; }
 
-height = ds_grid_height(ds_inventory);
+var height = ds_grid_height(ds_inventory);
 for(i = 0; i < height; i++) {
 	var item_id = ds_inventory[# 0, i];
 	
-	//If row is undefined, now need to continue iterating down the rows
-	if(item_id == 99) { break; }
+	//If row is empty, now need to continue iterating down the rows
+	if(item_id == inv_items.empty) { break; }
 	
 	//If row is defined, draw all the info
 	draw_set_color(c_black);
@@ -16,3 +16,17 @@ for(i = 0; i < height; i++) {
 	draw_text(i*80, y+80, ds_inventory[# 2, i]);
 	draw_text(i*80, y+120, ds_inventory[# 3, i]);
 }
+
+//Draw Item Sprites
+var item_id_to_draw = 2;
+
+var sheet_width = sprite_get_width(spr_inv_item_sheet);
+var sheet_height = sprite_get_height(spr_inv_item_sheet);
+
+var cell_x = item_id_to_draw mod 10
+var cell_y = item_id_to_draw div 10;
+
+var real_x = cell_x * 16;
+var real_y = cell_y * 16;
+
+draw_sprite_part(spr_inv_item_sheet, 0, real_x, real_y, 16, 16, 0, 0);

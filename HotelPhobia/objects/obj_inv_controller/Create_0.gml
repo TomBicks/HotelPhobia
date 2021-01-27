@@ -15,7 +15,7 @@ ds_inventory = ds_grid_create(4, 5);
 
 //Fill grid with values of 99, as this will be the value to mean a cell is empty
 //This is so we can sort in ascending order properly
-ds_grid_clear(ds_inventory, 99);
+ds_grid_clear(ds_inventory, inv_items.empty);
 
 /*ADDENDUM!! The ID can be done through an enumerator, for clarities sake; for example, can = 1, crowbar = 2, 
 key = 3, etc. What this means is I can type the "name" of the item, but it still reads to the code as 1, 2, 3 etc.*/
@@ -24,7 +24,8 @@ enum inv_items {
 	unknown = 0,
 	can = 1,
 	crowbar = 2,
-	key = 3
+	key = 3,
+	empty = 99
 }
 
 //NOTE!! for drawing a sprite as a section from a bigger sprite, use:

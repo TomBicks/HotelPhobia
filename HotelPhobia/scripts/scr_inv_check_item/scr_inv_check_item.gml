@@ -26,7 +26,7 @@ for(i = 0; i < height; i++) {
 	}
 	
 	//If row found that is 99, means we have reached the end of the items and should stop the for loop here
-	if(cell == 99) { break; }
+	if(cell == inv_items.empty) { break; }
 }
 
 //If code manages to reach this point, it means that item is not in the inventory, thus returning false
