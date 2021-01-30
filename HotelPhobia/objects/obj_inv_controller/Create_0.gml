@@ -5,7 +5,7 @@ show_inventory = false; //Should the inventory be shown right now?
 
 
 #region //Create and prepare the inventory ds_grid
-ds_inventory = ds_grid_create(4, 5);
+ds_inventory = ds_grid_create(4, 99);
 
 /*Stored values (a row is a single item) are: 
  - ID (to sort lowest to highest)
@@ -32,6 +32,10 @@ enum inv_items {
 	can = 1,
 	crowbar = 2,
 	key = 3,
+	battery = 4,
+	flashlight = 5,
+	keycard = 6,
+	note = 7,
 	empty = 99
 }
 #endregion
@@ -51,4 +55,10 @@ cell_width = 16;
 
 //Pixels between inventory cells
 cell_gap = 5;
+
+//Currently selected inventory slot (default 1)
+current_inv_cell = 1;
+
+//Currently selected inventory tab (default 1)
+current_inv_tab = 1;
 #endregion

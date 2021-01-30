@@ -1,3 +1,2 @@
-/// @description Toggle Inventory
+/// @description Toggle Inventory Visibility
 show_inventory = !show_inventory;
-//show_message("Inventory visibility toggled.");

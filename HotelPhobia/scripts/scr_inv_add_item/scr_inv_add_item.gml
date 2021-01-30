@@ -16,7 +16,7 @@ var item_amount = argument1;
 #region //Check the grid for instances of the item or add it otherwise
 var height = ds_grid_height(ds_inventory);
 for(i = 0; i < height; i++) {
-	cell = ds_inventory[# 0, i];
+	var cell = ds_inventory[# 0, i];
 	
 	//If row found that matches the given item_id, the item is already in the inventory
 	//This means we only need to increase the amount of the item by item_amount

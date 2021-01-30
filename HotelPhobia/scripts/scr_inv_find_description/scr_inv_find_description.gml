@@ -19,6 +19,18 @@ switch(item_id) {
 	case(inv_items.key):
 		description = "This is a key. I wonder what it unlocks?";
 		return(description);
+	case(inv_items.battery):
+		description = "This is a battery. I can use it to recharge devices.";
+		return(description);
+	case(inv_items.flashlight):
+		description = "This is a flashlight. I can use it to light up dark places.";
+		return(description);
+	case(inv_items.keycard):
+		description = "This is a keycard. I wonder what it unlocks?";
+		return(description);
+	case(inv_items.note):
+		description = "This is a note. I wonder what it has written?";
+		return(description);
 	default:
 		description = "I don't know what this is.";
 		return(description);
