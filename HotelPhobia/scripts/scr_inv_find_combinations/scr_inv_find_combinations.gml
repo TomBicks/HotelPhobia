@@ -4,17 +4,17 @@
 
 //Set argument to local variable
 //ID of the item to find a list of item combinations for, corresponding to the number on the inv_items enumerator
-var item_id = argument0;
+var _item_id = argument0;
 
 
 #region //Return the list of item combinations for the item matching the given ID
-var combinations;
-switch(item_id) {
+var _combinations;
+switch(_item_id) {
 	case(inv_items.can):
-		combinations = inv_items.crowbar;
-		return(combinations);
+		_combinations = inv_items.crowbar;
+		return(_combinations);
 	case(inv_items.crowbar):
-		combinations = inv_items.can;
-		return(combinations);
+		_combinations = inv_items.can;
+		return(_combinations);
 }
 #endregion

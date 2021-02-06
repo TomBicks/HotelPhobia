@@ -28,6 +28,7 @@ ds_grid_clear(ds_inventory, inv_items.empty);
 key = 3, etc. What this means is I can type the "name" of the item, but it still reads to the code as 1, 2, 3 etc.*/
 //NOTE!! Enums are implicitly global, meaning if this is defined here, any object can reference it now
 enum inv_items {
+	//Consumables -- IDs 0 to ??
 	unknown = 0,
 	can = 1,
 	crowbar = 2,
@@ -36,29 +37,36 @@ enum inv_items {
 	flashlight = 5,
 	keycard = 6,
 	note = 7,
+	//Key Items -- IDs ?? to ??
+	//Notes -- IDs ?? to ??
 	empty = 99
 }
 #endregion
 
 
 #region //Create initial variables and their values
-/*Only need to read width of the spritesheet, as for this to work, 
-the width and height of the spritesheet need to be the same*/
-sheet_cell_width = sprite_get_width(spr_inv_item_sheet) / 16;
+	#region //Values used to visualise items in inventory slots
+	/*Only need to read width of the spritesheet, as for this to work, 
+	the width and height of the spritesheet need to be the same*/
+	sheet_cell_width = sprite_get_width(spr_inv_item_sheet) / 16;
 
-//x and y coordinates of the top left of the first inventory cell in the ui
-first_inv_cell_x = 37;
-first_inv_cell_y = 3;
+	//x and y coordinates of the top left of the first inventory cell in the ui
+	first_inv_cell_x = 37;
+	first_inv_cell_y = 3;
 
-//Width of each inventory cell
-cell_width = 16;
+	//Width of each inventory cell
+	cell_width = 16;
 
-//Pixels between inventory cells
-cell_gap = 5;
+	//Pixels between inventory cells
+	cell_gap = 5;
+	#endregion
 
-//Currently selected inventory slot (default 1)
-current_inv_cell = 1;
 
-//Currently selected inventory tab (default 1)
-current_inv_tab = 1;
+	#region //Values used for selecting and navigating items in the inventory slots
+	//Currently selected inventory slot (default 1)
+	current_inv_cell = 1;
+
+	//Currently selected inventory tab (default 1)
+	current_inv_tab = 1;
+	#endregion
 #endregion
