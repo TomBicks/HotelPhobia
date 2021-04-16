@@ -8,10 +8,14 @@ draw_sprite_part(spr_inv_ui, 0, 18, 0, 142, 35, x, y);
 
 #region //Draw Item Sprites in Inventory Slots
 for(i = 0; i < 5; i++) {
-	var _item_id = ds_inventory[# 0, i];
+	//If accessing grid at this row would exceed the grid height, break loop
+	if((first_cell_row + i) >= grid_height) { break; }
+
+	//If not, access item ID at this row
+	var _item_id = ds_inventory[# 0, first_cell_row + i];
 	
 	//If row is empty, no need to continue iterating down the rows
-	if(_item_id == inv_items.empty || is_undefined(_item_id)) { break; }
+	if(_item_id == inv_items.empty) { break; }
 	
 	/*Need to mod and div by the same number, hence using width twice 
 	and why spritesheet should have the same width and height*/

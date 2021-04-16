@@ -5,7 +5,7 @@ show_inventory = false; //Should the inventory be shown right now?
 
 
 #region //Create and prepare the inventory ds_grid
-ds_inventory = ds_grid_create(4, 99);
+ds_inventory = ds_grid_create(4, 7);
 
 /*Stored values (a row is a single item) are: 
  - ID (to sort lowest to highest)
@@ -45,6 +45,8 @@ enum inv_items {
 
 
 #region //Create initial variables and their values
+	grid_height = ds_grid_height(ds_inventory);
+
 	#region //Values used to visualise items in inventory slots
 	/*Only need to read width of the spritesheet, as for this to work, 
 	the width and height of the spritesheet need to be the same*/
@@ -62,11 +64,12 @@ enum inv_items {
 	#endregion
 
 
-	#region //Values used for selecting and navigating items in the inventory slots
-	//Currently selected inventory slot (default 1)
+	#region //Values used for selecting and navigating items in the inventory cells
+	//Currently selected inventory cell and tab (default 1) used to draw selected cell/tab indicators
 	current_inv_cell = 1;
-
-	//Currently selected inventory tab (default 1)
 	current_inv_tab = 1;
+	
+	//The value of the leftmost/first item cell, corresponding to the row in the ds_grid that cell refers to
+	first_cell_row = 0;
 	#endregion
 #endregion
