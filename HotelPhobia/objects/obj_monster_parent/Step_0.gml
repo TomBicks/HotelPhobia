@@ -41,3 +41,6 @@ else if(ai_state == monster_states.wander) {
 	image_xscale = sign(dir_facing);
 	#endregion
 }
+
+//Set sprite to reflect current state
+sprite_index = sprite_array[ai_state];
