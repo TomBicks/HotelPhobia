@@ -6,6 +6,9 @@ image_blend = c_white;
 
 if(ai_state == monster_states.idle) {
 	#region // Idle State Logic
+	//DEBUG CODE!!
+	if(alarm_get(0) > 0) { image_blend = c_orange; }
+	
 	counter += 1;
 	//Check if monster should select a new action
 	if(counter >= room_speed * action_duration) {
