@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "20333620-c843-4e26-9d2d-040d03dddb97",
+            "Value": {
+                "id": "1fdc21d0-cc74-4e95-88fb-ba1040d5c2cf",
+                "resourcePath": "rooms\\rm_apartment_test_3\\rm_apartment_test_3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "2482b8cd-62ec-4c34-9369-e76eb03112ee",
             "Value": {
                 "id": "a12a6651-3dd2-412e-adc6-eeef6bb069ec",
@@ -155,6 +163,14 @@
             "Value": {
                 "id": "13e81cdf-e240-4228-96b9-48731a70791b",
                 "resourcePath": "rooms\\rm_light_switch_test\\rm_light_switch_test.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "3cca6c91-20de-4bb5-af26-544a9a7c1812",
+            "Value": {
+                "id": "bd0ac891-356f-4740-aadc-8e75dbb03dce",
+                "resourcePath": "rooms\\rm_apartment_test_2\\rm_apartment_test_2.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -442,7 +458,7 @@
             "Key": "e8a23ecf-6695-47c1-bfc3-0c4d670e2190",
             "Value": {
                 "id": "7f7e9bf4-fab4-46a9-8b90-3aac1c574652",
-                "resourcePath": "rooms\\rm_room_navigation_test1\\rm_room_navigation_test1.yy",
+                "resourcePath": "rooms\\rm_apartment_test_1\\rm_apartment_test_1.yy",
                 "resourceType": "GMRoom"
             }
         },
