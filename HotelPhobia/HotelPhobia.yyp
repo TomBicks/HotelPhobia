@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "32b2ab35-a84c-47a2-81d9-1d879a544a39",
+            "Value": {
+                "id": "7bf7e9b1-e1d2-4e23-90ac-e694ec2524e3",
+                "resourcePath": "views\\32b2ab35-a84c-47a2-81d9-1d879a544a39.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3781a4f0-849b-4188-91b8-862cfead6109",
             "Value": {
                 "id": "c96d409e-a9e4-49ee-be98-e079d2627738",
@@ -159,6 +167,14 @@
             }
         },
         {
+            "Key": "483b7ac1-ce5c-4c24-bf1d-87d7eacb910c",
+            "Value": {
+                "id": "8918b499-a030-4b2d-9a68-dbaa17229a5c",
+                "resourcePath": "scripts\\scr_monster_leaving\\scr_monster_leaving.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4be6c16a-6c95-4fee-8d2a-13dc264803fb",
             "Value": {
                 "id": "586286e4-3731-4ec6-af66-313138da3eb0",
@@ -180,6 +196,14 @@
                 "id": "5092ed2b-7c16-4dd0-ab3a-c02863537f9c",
                 "resourcePath": "views\\588de05f-662f-4486-874b-f296cdcdd8e9.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6afab0b8-865e-4704-96f1-f2efd4c19ffc",
+            "Value": {
+                "id": "5f409c15-4e26-4859-bc64-ad4b050077f5",
+                "resourcePath": "scripts\\scr_monster_idle_basic\\scr_monster_idle_basic.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -215,6 +239,14 @@
             }
         },
         {
+            "Key": "9990ef16-2a18-423f-94a8-46904bc4d492",
+            "Value": {
+                "id": "63144f8a-7761-45ef-a2c4-65686dac0818",
+                "resourcePath": "scripts\\scr_monster_attack_basic\\scr_monster_attack_basic.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9f68d7ce-fcc9-4ed6-afb0-28abf36f06e7",
             "Value": {
                 "id": "f5f895fc-5e16-4b34-8bf2-c64042a05212",
@@ -236,6 +268,30 @@
                 "id": "0207937c-75bc-405b-ad51-981a08eb626e",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aa1254fc-6a02-4c13-afef-87123e656bcf",
+            "Value": {
+                "id": "f3dd1a88-b667-4682-a956-eaf21a526cb7",
+                "resourcePath": "scripts\\scr_monster_chase_basic\\scr_monster_chase_basic.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "add50994-4367-4184-a521-15ea2040177c",
+            "Value": {
+                "id": "0fc86454-f64d-43a9-8337-62c271c17cbe",
+                "resourcePath": "scripts\\scr_monster_seek_basic\\scr_monster_seek_basic.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b52503f2-3eb1-405e-af47-7c6181afacfb",
+            "Value": {
+                "id": "ab0323dd-6ee2-41b8-80b4-2fb70aa16897",
+                "resourcePath": "scripts\\scr_monster_wander_basic\\scr_monster_wander_basic.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -369,6 +425,12 @@
     ],
     "script_order": [
         "b747732d-9d0b-4fea-a74f-d8d1e206456b",
+        "6afab0b8-865e-4704-96f1-f2efd4c19ffc",
+        "b52503f2-3eb1-405e-af47-7c6181afacfb",
+        "add50994-4367-4184-a521-15ea2040177c",
+        "aa1254fc-6a02-4c13-afef-87123e656bcf",
+        "9990ef16-2a18-423f-94a8-46904bc4d492",
+        "483b7ac1-ce5c-4c24-bf1d-87d7eacb910c",
         "102ab08d-7ef3-4eff-adbb-93e15ba08901"
     ],
     "tutorial": ""
