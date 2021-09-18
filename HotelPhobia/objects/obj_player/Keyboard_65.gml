@@ -1,3 +1,3 @@
 /// @description Move Player Left
-// You can write your code in this editor
-x -= 4;
+// Move player left, stopping at left room border
+x = clamp(x - 4, sprite_width/2, room_width-(sprite_width/2));
