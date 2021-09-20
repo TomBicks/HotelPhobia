@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Smoothly follow the player
 // You can write your code in this editor
 #macro view view_camera[0]
 
