@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "1efe1203-97b7-4624-8377-92cc426af625",
+            "Value": {
+                "id": "e01955e5-9d54-449b-807d-786ef0e3621d",
+                "resourcePath": "views\\1efe1203-97b7-4624-8377-92cc426af625.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "20333620-c843-4e26-9d2d-040d03dddb97",
             "Value": {
                 "id": "1fdc21d0-cc74-4e95-88fb-ba1040d5c2cf",
@@ -263,6 +271,14 @@
             }
         },
         {
+            "Key": "633a701b-4550-4a0b-bd2e-22811c088146",
+            "Value": {
+                "id": "f9aaf2bb-698d-4bb2-998e-be731cd59704",
+                "resourcePath": "scripts\\scr_create_player_data\\scr_create_player_data.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6afab0b8-865e-4704-96f1-f2efd4c19ffc",
             "Value": {
                 "id": "5f409c15-4e26-4859-bc64-ad4b050077f5",
@@ -316,6 +332,14 @@
                 "id": "63144f8a-7761-45ef-a2c4-65686dac0818",
                 "resourcePath": "scripts\\scr_monster_attack_basic\\scr_monster_attack_basic.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9a928522-3385-4470-afd3-5144a7fa8982",
+            "Value": {
+                "id": "ff4ecb3c-2729-409b-b28d-cfaf2d9135f3",
+                "resourcePath": "objects\\obj_save_manager\\obj_save_manager.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -536,7 +560,8 @@
         "aa1254fc-6a02-4c13-afef-87123e656bcf",
         "9990ef16-2a18-423f-94a8-46904bc4d492",
         "483b7ac1-ce5c-4c24-bf1d-87d7eacb910c",
-        "102ab08d-7ef3-4eff-adbb-93e15ba08901"
+        "102ab08d-7ef3-4eff-adbb-93e15ba08901",
+        "633a701b-4550-4a0b-bd2e-22811c088146"
     ],
     "tutorial": ""
 }
