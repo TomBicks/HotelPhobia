@@ -14,11 +14,11 @@ var current_room = argument2;
 #endregion
 
 #region //Create array and populate with player data
-player_array = array_create(3, -1);
+player_array = array_create(data_player.column_count, -1);
 
-player_array[0] = player_x;
-player_array[1] = player_y;
-player_array[2] = current_room;
+player_array[data_player.x] = player_x;
+player_array[data_player.y] = player_y;
+player_array[data_player.current_room] = current_room;
 #endregion
 
 return player_array;
