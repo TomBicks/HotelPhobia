@@ -1,5 +1,5 @@
 //Create initial variables and their values
-empty = false; //Has the object been interact with already and can it be interacted with again?
+//empty = false; //Has the object been interact with already and can it be interacted with again?
 nearby = false; //Is the object near enough to the player to be interacted with (and have an outline drawn around it)?
 shader = sha_interact_outline; //Set the shader that applies an outline to the object
 
