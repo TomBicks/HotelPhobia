@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "913afae6-84df-40a2-ad4f-031c40993970",
+            "Value": {
+                "id": "9a83b8af-6597-4877-94f2-99d7dbccbe2f",
+                "resourcePath": "scripts\\scr_item_pickup\\scr_item_pickup.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "954fd88c-0cc8-4d9b-8dee-bf31e34f18a5",
             "Value": {
                 "id": "6eb33035-52fd-49a0-bbd3-ea13039545a1",
@@ -586,6 +594,7 @@
     "script_order": [
         "b747732d-9d0b-4fea-a74f-d8d1e206456b",
         "b5ebe7ce-9991-45f5-a7e6-4e31f482dfbb",
+        "913afae6-84df-40a2-ad4f-031c40993970",
         "6afab0b8-865e-4704-96f1-f2efd4c19ffc",
         "b52503f2-3eb1-405e-af47-7c6181afacfb",
         "add50994-4367-4184-a521-15ea2040177c",

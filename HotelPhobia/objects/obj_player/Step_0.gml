@@ -2,10 +2,10 @@
 
 #region // Check for interactable objects nearby
 if(instance_exists(obj_interact_parent)) {
-	var nearby_interact = instance_nearest(x, y, obj_interact_parent);
-	if(distance_to_object(nearby_interact) < interact_range) {
+	var _nearby_interact = instance_nearest(x, y, obj_interact_parent);
+	if(distance_to_object(_nearby_interact) < interact_range) {
 		with (obj_interact_parent) {
-			if(self == nearby_interact) {
+			if(self == _nearby_interact) {
 				nearby = true;
 				if(keyboard_check_pressed(vk_up)) {
 					script_execute(behaviour);	
@@ -15,7 +15,7 @@ if(instance_exists(obj_interact_parent)) {
 			}
 		}
 	} else {
-		nearby_interact.nearby = false;
+		_nearby_interact.nearby = false;
 	}
 }
 #endregion
