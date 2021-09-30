@@ -9,7 +9,7 @@ scr_save_data(player_data, "player_data");
 #endregion
 
 #region //Add environmental item data to save data
-scr_dave_data(env_item_data, "env_item_data");
+scr_save_data(env_item_data, "env_item_data");
 #endregion
 
 #region //Create ds_grid and populate with environmental object data
