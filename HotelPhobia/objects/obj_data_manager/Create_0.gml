@@ -17,3 +17,8 @@ enum data_items {
 	taken
 }
 #endregion
+
+#region //Create individual data structures for each subset of data that is used during runtime
+//Create map for items encountered in the environment, being either on the ground or picked up
+env_item_data = ds_map_create();
+#endregion

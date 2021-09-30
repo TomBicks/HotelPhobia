@@ -271,14 +271,6 @@
             }
         },
         {
-            "Key": "56ca9bf4-fc5f-4d61-9054-10862d2473eb",
-            "Value": {
-                "id": "56770073-cfa0-4689-8062-86b5b5b2f0d4",
-                "resourcePath": "objects\\obj_item_manager\\obj_item_manager.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "588de05f-662f-4486-874b-f296cdcdd8e9",
             "Value": {
                 "id": "5092ed2b-7c16-4dd0-ab3a-c02863537f9c",
@@ -370,7 +362,7 @@
             "Key": "9a928522-3385-4470-afd3-5144a7fa8982",
             "Value": {
                 "id": "ff4ecb3c-2729-409b-b28d-cfaf2d9135f3",
-                "resourcePath": "objects\\obj_save_manager\\obj_save_manager.yy",
+                "resourcePath": "objects\\obj_data_manager\\obj_data_manager.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -459,6 +451,14 @@
             "Value": {
                 "id": "9f7cf0bc-f3d3-4953-9c41-acc9e2b1ebef",
                 "resourcePath": "scripts\\scr_light_switch\\scr_light_switch.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b9cdf7e5-729b-435a-b0be-ba5d88201586",
+            "Value": {
+                "id": "b5f10de4-1039-4378-8d27-36f829ec6445",
+                "resourcePath": "scripts\\scr_save_data\\scr_save_data.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -602,7 +602,8 @@
         "9990ef16-2a18-423f-94a8-46904bc4d492",
         "483b7ac1-ce5c-4c24-bf1d-87d7eacb910c",
         "102ab08d-7ef3-4eff-adbb-93e15ba08901",
-        "633a701b-4550-4a0b-bd2e-22811c088146"
+        "633a701b-4550-4a0b-bd2e-22811c088146",
+        "b9cdf7e5-729b-435a-b0be-ba5d88201586"
     ],
     "tutorial": ""
 }
