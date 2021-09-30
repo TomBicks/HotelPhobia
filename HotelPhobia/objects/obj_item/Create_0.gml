@@ -16,10 +16,10 @@ if there but 'nottaken', replace with 'taken' value*/
 //Define unique string for the item
 identifier = object_get_name(object_index) + room_get_name(room) + string(x) + string(y);
 
-//Redefine as a variable to use with obj_item_manager
-var _identifier = identifier;
-
 with(obj_item_manager) {
+	//Get identifier for item
+	var _identifier = other.identifier;
+	
 	//Check if item has already been encountered and added to the list
 	var _result = ds_map_find_value(env_item_data, _identifier);
 	
