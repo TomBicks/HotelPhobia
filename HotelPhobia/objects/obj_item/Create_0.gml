@@ -1,17 +1,9 @@
 //Inherit initial variables and their values from parent object
 event_inherited();
 
-/*NOTE!! What I'm potentially planning for the enviroment item data storage is to have 
-the identifier be added to a list with'taken' tacked onto the end ofthe identifier string 
-if it has been picked up. Then, when we enter a room, an item checks for its identifier
-in the list and checks whether it has 'taken' or not; if not, it continues to exist; if so,
-the item destroys itself, having already been 'picked up'.*/
-
-/*NOTE2!! Forget the list? a ds_map might be perfect, as I only need to store one variable
-, in the form of a string indicating whether the item is taken or not, and can use the identifier 
-to always check fr the correct item every time with no waste; just chuck in the identifier as a 
-key and see whether it is taken or not; if it is not even there, add it. if it's taken, destroy; 
-if there but 'nottaken', replace with 'taken' value*/
+//Create initial variables and their values for the child object
+item_id = inv_items.can; //The ID of the item being picked up
+item_amount = 1; //The quantity of the item being picked up
 
 //Define unique string for the item
 identifier = object_get_name(object_index) + room_get_name(room) + string(x) + string(y);
