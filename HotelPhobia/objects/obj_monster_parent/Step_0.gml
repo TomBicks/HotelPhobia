@@ -12,8 +12,8 @@ if(ai_state == monster_states.idle) {
 	counter += 1;
 	//Check if monster should select a new action
 	if(counter >= room_speed * action_duration) {
-		var change = choose(0,1);
-		switch(change) {
+		var _change = choose(0,1);
+		switch(_change) {
 			case 0: 
 				//If Seek Alarm is currently on, seek rather than wander
 				if(alarm_get(0) > 0) { ai_state = monster_states.seek; }
@@ -39,8 +39,8 @@ else if(ai_state == monster_states.wander) {
 	counter += 1;
 	//Check if monster should select a new action
 	if(counter >= room_speed * action_duration) {
-		var change = choose(0,1);
-		switch(change) {
+		var _change = choose(0,1);
+		switch(_change) {
 			case 0: 
 				ai_state = monster_states.idle;
 			case 1: 
@@ -83,8 +83,8 @@ else if(ai_state == monster_states.seek) {
 		counter += 1;
 		//Check if monster should select a new action
 		if(counter >= room_speed * action_duration) {
-			var change = choose(0,1);
-			switch(change) {
+			var _change = choose(0,1);
+			switch(_change) {
 				case 0: 
 					ai_state = monster_states.idle;
 				case 1: 
