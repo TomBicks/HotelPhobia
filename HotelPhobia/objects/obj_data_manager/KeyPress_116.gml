@@ -14,6 +14,10 @@ scr_save_data(env_item_data, "env_item_data");
 //stuff like light switches and lights whether they were on or off between rooms
 #endregion
 
+#region //Add inventory data to save data
+scr_save_data(obj_inv_manager.inventory_data, "inventory_data");
+#endregion
+
 //Write save_data to file
 ds_map_secure_save(save_data, save_file);
 show_message("Game Saved.");
