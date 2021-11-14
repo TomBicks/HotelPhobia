@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Save Environmental Object Data on leaving room
 
 #region //Update or add state of environmental objects (E.g. lights and switches, on or off)
 	#region //Obtain states of all lights in the room
