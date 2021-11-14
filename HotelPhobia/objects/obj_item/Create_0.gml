@@ -14,7 +14,7 @@ if(instance_exists(obj_data_manager)) {
 		//Get identifier for item
 		var _identifier = other.identifier;
 	
-		//Check if item has already been encountered and added to the list
+		//Check if item has already been encountered and added to the map
 		var _result = ds_map_find_value(env_item_data, _identifier);
 	
 		//If item is already picked up, destroy it, as it has already been picked up
@@ -27,10 +27,10 @@ if(instance_exists(obj_data_manager)) {
 				show_debug_message("Item " + _identifier + " still on ground; leaving as is");
 			}
 		}
-		//If item is not in the list, add it as being still on the ground
+		//If item is not in the map, add it as being still on the ground
 		else {
 			ds_map_add(env_item_data, _identifier, "on_ground");
-			show_debug_message("Item " + _identifier + " encountered for first time; adding to list");
+			show_debug_message("Item " + _identifier + " encountered for first time; adding to map");
 		}
 	}
 }
