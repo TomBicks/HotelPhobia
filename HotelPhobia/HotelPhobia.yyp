@@ -431,18 +431,10 @@
             }
         },
         {
-            "Key": "af5c11f6-ef2f-4cf0-9cc3-bff874698546",
-            "Value": {
-                "id": "f847be3a-6b83-4f4b-9180-8c62179510a6",
-                "resourcePath": "objects\\obj_door_side\\obj_door_side.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "b2fc6315-3c05-4b1b-91e8-0c348b658585",
             "Value": {
                 "id": "ad50d676-5cb8-4e14-9548-1b63072feb9b",
-                "resourcePath": "objects\\obj_door_back\\obj_door_back.yy",
+                "resourcePath": "objects\\obj_door\\obj_door.yy",
                 "resourceType": "GMObject"
             }
         },
