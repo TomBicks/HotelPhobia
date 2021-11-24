@@ -4,7 +4,7 @@
 
 #region //Identify object and whether it is in the map
 //Define unique string for the environmental object
-var _identifier = object_get_name(object_index) + room_get_name(room) + string(x) + string(y);
+var _identifier = scr_get_identifier(self);
 
 //Obtain reference to the env_obj_data ds_map where the states are stored
 var _env_obj_data = obj_data_manager.env_obj_data;
@@ -19,7 +19,7 @@ if(variable_instance_exists(self.id, argument0)) {
 	//The state to be saved/updated
 	var _object_state = argument0;
 } else {
-	show_error("Error: Object '" + _identifier + ")'s specified state does not exist to be saved or updated!", true);
+	show_error("Error: Object '" + _identifier + "'s specified state does not exist to be saved or updated!", true);
 }
 #endregion
 

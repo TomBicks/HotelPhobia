@@ -6,19 +6,19 @@
 
 #region //Set arguments to local variables
 //X & Y coordinates of the player
-var player_x = argument0;
-var player_y = argument1;
+var _player_x = argument0;
+var _player_y = argument1;
 
 //The name of the room the player is currently in
-var current_room = argument2;
+var _current_room = argument2;
 #endregion
 
 #region //Create array and populate with player data
-player_array = array_create(data_player.column_count, -1);
+var _player_array = array_create(data_player.column_count, -1);
 
-player_array[data_player.x] = player_x;
-player_array[data_player.y] = player_y;
-player_array[data_player.current_room] = current_room;
+_player_array[data_player.x] = _player_x;
+_player_array[data_player.y] = _player_y;
+_player_array[data_player.current_room] = _current_room;
 #endregion
 
-return player_array;
+return _player_array;

@@ -3,7 +3,7 @@
 #region //Load states of all lights in the room
 with(obj_light_parent) {
 	//Define unique string for the light object
-	var _identifier = object_get_name(object_index) + room_get_name(room) + string(x) + string(y);
+	var _identifier = scr_get_identifier(self);
 		
 	//Obtain reference to the env_obj_data list
 	var _env_obj_data = other.env_obj_data;
@@ -22,7 +22,7 @@ with(obj_light_parent) {
 #region //Load states of all light switches in the room
 with(obj_light_switch) {
 	//Define unique string for the light switch object
-	var _identifier = object_get_name(object_index) + room_get_name(room) + string(x) + string(y);
+	var _identifier = scr_get_identifier(self);
 		
 	//Obtain reference to the env_obj_data list
 	var _env_obj_data = other.env_obj_data;
