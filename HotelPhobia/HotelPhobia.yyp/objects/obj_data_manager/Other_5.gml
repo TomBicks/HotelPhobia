@@ -8,8 +8,8 @@
 
 #region //Update or add state of environmental object
 	//Save states of all lights in the room
-	//with(obj_light_parent) { scr_save_env_obj_data(light_on); }
+	with(obj_light_parent) { scr_save_env_obj_data("light_on"); }
 	
 	//Save states of all light switches in the room
-	//with(obj_light_switch) { scr_save_env_obj_data(switch_on); }
+	with(obj_light_switch) { scr_save_env_obj_data("switch_on"); }
 #endregion
