@@ -1,12 +1,7 @@
 /// @function						scr_inv_find_combinations(item_id);
-/// @param {integer}	item_id		The ID of the item to find a list of item combinations for
+/// @param {integer}	item_id		The ID of the item to find a list of item combinations for, corresponding to the number on the inv_items enumerator
 /// @description					Finds the list of items combinable with the item and returns it, using the ID of the item
-function scr_inv_find_combinations(argument0) {
-
-	//Set argument to local variable
-	//ID of the item to find a list of item combinations for, corresponding to the number on the inv_items enumerator
-	var _item_id = argument0;
-
+function scr_inv_find_combinations(_item_id) {
 
 #region //Return the list of item combinations for the item matching the given ID
 	var _combinations;
@@ -19,6 +14,5 @@ function scr_inv_find_combinations(argument0) {
 			return(_combinations);
 	}
 #endregion
-
 
 }

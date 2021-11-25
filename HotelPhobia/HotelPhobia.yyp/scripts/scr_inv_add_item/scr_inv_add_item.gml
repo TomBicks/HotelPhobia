@@ -1,18 +1,8 @@
 /// @function							scr_inv_add_item(item_id, item_amount);
-/// @param {integer}	item_id			The ID of the item to be added (can be an enum field)
-/// @param {string}		item_amount		The amount of the item to be added
+/// @param {integer}	item_id			The ID of the item to be added, corresponding to the number on the inv_items enumerator
+/// @param {string}		item_amount		The amount of the item to be added to the inventory
 /// @description						Adds an item to the inventory, then sorts it by ID
-function scr_inv_add_item(argument0, argument1) {
-
-
-#region //Set arguments to local variables
-	//ID of the item to be added, corresponding to the number on the inv_items enumerator
-	var _item_id = argument0;
-
-	//Amount of the item to be added to the inventory
-	var _item_amount = argument1;
-#endregion
-
+function scr_inv_add_item(_item_id, _item_amount) {
 
 #region //Check the grid for instances of the item or add it otherwise
 	var _height = ds_grid_height(ds_inventory);
@@ -47,6 +37,5 @@ function scr_inv_add_item(argument0, argument1) {
 		}
 	}
 #endregion
-
 
 }

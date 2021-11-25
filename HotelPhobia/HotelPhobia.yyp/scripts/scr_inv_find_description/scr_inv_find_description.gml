@@ -1,12 +1,7 @@
 /// @function						scr_inv_find_description(item_id);
-/// @param {integer}	item_id		The ID of the item to find a description for
+/// @param {integer}	item_id		The ID of the item to find a description for, corresponding to the number on the inv_items enumerator
 /// @description					Finds the description of an item and returns it, using the ID of the item
-function scr_inv_find_description(argument0) {
-
-	//Set argument to local variable
-	//ID of the item to find a description for, corresponding to the number on the inv_items enumerator
-	var _item_id = argument0;
-
+function scr_inv_find_description(_item_id) {
 
 #region //Return the description for the item matching the given ID
 	var _description;
@@ -37,6 +32,5 @@ function scr_inv_find_description(argument0) {
 			return(_description);
 	}
 #endregion
-
 
 }
