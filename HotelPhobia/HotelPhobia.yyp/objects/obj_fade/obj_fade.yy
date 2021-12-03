@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_light",
-    "path": "sprites/spr_light/spr_light.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -11,7 +8,7 @@
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -22,16 +19,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environmental Objects",
-    "path": "folders/Objects/Environmental Objects.yy",
+    "name": "Screen Effect Objects",
+    "path": "folders/Objects/Screen Effect Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_light_parent",
+  "name": "obj_fade",
   "tags": [],
   "resourceType": "GMObject",
 }

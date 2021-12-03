@@ -14,7 +14,7 @@ with(obj_light_parent) {
 	//If object is already in the map, update its state
 	if(!is_undefined(_result)) {
 		light_on = _result;
-		show_debug_message("Object" + _identifier + " state found; loading state");
+		show_debug_message("Object " + _identifier + " state found; loading state");
 	}
 }
 #endregion
