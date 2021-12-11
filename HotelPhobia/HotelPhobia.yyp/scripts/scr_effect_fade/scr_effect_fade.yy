@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_create_effect",
+  "name": "scr_effect_fade",
   "tags": [],
   "resourceType": "GMScript",
 }
