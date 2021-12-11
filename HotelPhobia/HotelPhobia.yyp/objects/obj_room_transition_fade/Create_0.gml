@@ -12,3 +12,8 @@ fade_color = c_black;
 //Is the fader fading out to black? If not, it's fading in from black
 fading_out = true;
 image_alpha = 0;
+
+//Initialise the target room and coords for the door to pass onto this object
+target_room = -1; //The room the door leads to
+target_x = 0; //The x coord of the location the door leads to
+target_y = 0; //The y coord of the location the door leads to

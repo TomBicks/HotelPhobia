@@ -29,7 +29,7 @@
     "path": "folders/Objects/Screen Effect Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_effect_fade",
+  "name": "obj_room_transition_fade",
   "tags": [],
   "resourceType": "GMObject",
 }

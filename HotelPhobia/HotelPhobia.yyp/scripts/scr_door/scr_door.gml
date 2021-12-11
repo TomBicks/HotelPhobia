@@ -7,12 +7,7 @@ if(!unlocked || target_room = -1) {
 } else {
 	audio_play_sound(snd_door_open, 0, false);
 	
-	//Determine time needed for fade to occur
-	alarm_set(0, goto_delay);
-	scr_effect_fade(fade_out_speed_needed,0.025,c_black);
+	scr_room_transition_fade(target_room, target_x, target_y, 0.025, 0.025, c_black);
 }
-
-/*NOTE!! Need to make it  that the target_x and target_y coords are passed through and somehow make
-the player object appear at those coords (can't place the obj_player in the rooms beforehand)*/
 
 }

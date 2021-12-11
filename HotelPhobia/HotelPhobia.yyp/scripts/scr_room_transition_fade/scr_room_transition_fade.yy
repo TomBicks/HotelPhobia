@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_effect_fade",
+  "name": "scr_room_transition_fade",
   "tags": [],
   "resourceType": "GMScript",
 }
