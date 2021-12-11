@@ -5,8 +5,7 @@ if(fading_out) {
 	if(image_alpha >= 1) { 
 		image_alpha = 1;
 		room_goto(target_room);
-		obj_player.x = target_x;
-		obj_player.y = target_y;
+		alarm_set(0,1); //Set player coords after 1 tick delay
 		fading_out = false;
 	}
 }
