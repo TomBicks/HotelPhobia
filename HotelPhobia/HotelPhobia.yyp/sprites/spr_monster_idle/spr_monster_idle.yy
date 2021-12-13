@@ -1,8 +1,4 @@
 {
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -20,6 +16,10 @@
   "For3D": false,
   "width": 80,
   "height": 80,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
@@ -117,8 +117,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Monster Test",
-    "path": "folders/Sprites/Monster Test.yy",
+    "name": "Sprites",
+    "path": "folders/Monsters/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_monster_idle",
