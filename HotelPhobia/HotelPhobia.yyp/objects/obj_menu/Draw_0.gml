@@ -7,5 +7,7 @@ draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 
 for(var i = 0; i < opt_length; i++) {
-	draw_text(x + opt_border, y + opt_border + (opt_spacing * i), option[i]);
+	var _opt_color = c_white;
+	if(menu_pos == i) { _opt_color = c_yellow; }
+	draw_text_color(x + opt_border, y + opt_border + (opt_spacing * i), option[i], _opt_color, _opt_color, _opt_color, _opt_color, 1);
 }
