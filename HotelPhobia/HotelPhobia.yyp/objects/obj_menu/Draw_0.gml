@@ -1,15 +1,6 @@
+/// @description Draw Menu & Options
 //Set font to custom font
 draw_set_font(global.font_main);
-
-//Dynamically measure the dimensions of the menu borders (set custom font before to ensure correct font measured)
-//NOTE!! Can proibably replace this with a script in the options, much like I did with rechecking how many options there are
-var _new_width = 0
-//Find longest of the options and make that represent new width
-for(var i = 0; i < opt_length; i++) {
-	var _opt_width = string_width(option[menu_level, i]);
-	_new_width = max(_new_width, _opt_width);
-}
-height = opt_border * 2 + string_height(option[0,0]) + (opt_length - 1) * opt_spacing;
 
 // Draw the menu background
 draw_sprite_ext(sprite_index, image_index, x, y, width/sprite_width, height/sprite_height, 0, c_white, 1);

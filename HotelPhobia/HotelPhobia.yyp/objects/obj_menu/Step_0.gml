@@ -1,12 +1,9 @@
-/// @description Insert description here
+/// @description Check Input & Use Options
 
 //Get input;
 up_key = keyboard_check_pressed(vk_up);
 down_key = keyboard_check_pressed(vk_down);
 accept_key = keyboard_check_pressed(vk_enter);
-
-//Store number of options in current menu level
-//opt_length = array_length(option[menu_level]);
 
 //Increase or decrease position in menu when moving up or down
 menu_pos += down_key - up_key;
@@ -38,6 +35,7 @@ if(accept_key) {
 					break;
 				default:
 					show_error("Option does not exist!", true);
+					break;
 			}
 		
 		//Settings Menu
@@ -58,6 +56,7 @@ if(accept_key) {
 					break;
 				default:
 					show_error("Option does not exist!", true);
+					break;
 			}
 		
 		//If menu level has changed since the start of the loop
@@ -66,6 +65,8 @@ if(accept_key) {
 			menu_pos = 0;
 			//Update number of options in current menu level
 			opt_length = array_length(option[menu_level]);
+			//Dynamically calculate initial height and width after a delay
+			alarm_set(0, 1);
 		}
 	}
 }
