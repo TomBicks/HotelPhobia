@@ -18,7 +18,7 @@ if(accept_key) {
 	var _init_level = menu_level;
 	
 	switch(menu_level) {
-		//Main Menu
+		#region //Main Menu
 		case 0:
 			switch(menu_pos) {
 				//Start Game
@@ -37,8 +37,9 @@ if(accept_key) {
 					show_error("Option does not exist!", true);
 					break;
 			}
+		#endregion
 		
-		//Settings Menu
+		#region //Settings Menu
 		case 1:
 			switch(menu_pos) {
 				//Test 1
@@ -58,6 +59,7 @@ if(accept_key) {
 					show_error("Option does not exist!", true);
 					break;
 			}
+		#endregion
 		
 		//If menu level has changed since the start of the loop
 		if(_init_level != menu_level) {
@@ -65,8 +67,21 @@ if(accept_key) {
 			menu_pos = 0;
 			//Update number of options in current menu level
 			opt_length = array_length(option[menu_level]);
-			//Dynamically calculate initial height and width after a delay
-			alarm_set(0, 1);
+			#region //Dynamically calculate height and width
+			draw_set_font(global.font_main);
+			var _new_width = 0
+			//Find longest of the options and make that represent new width
+			for(var i = 0; i < opt_length; i++) {
+				var _opt_width = string_width(option[menu_level, i]);
+				_new_width = max(_new_width, _opt_width);
+			}
+			width = _new_width + opt_border * 2;
+			height = opt_border * 2 + string_height(option[0,0]) + (opt_length - 1) * opt_spacing;
+			#endregion
+			#region //Recentre menu
+			x = camera_get_view_x(view) + camera_get_view_width(view)/2 - width/2;
+			y = camera_get_view_y(view) + camera_get_view_height(view)/2 - height/2;
+			#endregion
 		}
 	}
 }

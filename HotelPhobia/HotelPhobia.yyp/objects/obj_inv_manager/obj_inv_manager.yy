@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Manager_Essential Objects",
-    "path": "folders/Objects/Manager_Essential Objects.yy",
+    "name": "Essential Objects",
+    "path": "folders/Objects/Essential Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_inv_manager",

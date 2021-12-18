@@ -26,8 +26,11 @@ menu_pos = 0;
 
 //Determine what level of the menu the user is on (level is x where option[x, y] )
 menu_level = 0;
-//The length of the current level's array of options
+//Set the length of the current level's array of options
 opt_length = array_length(option[menu_level]);
 
 //Dynamically calculate initial height and width after a delay
-alarm_set(0, 1);
+alarm_set(0, 2);
+
+//Centre initial menu after a delay
+alarm_set(1, 2);
