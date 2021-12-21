@@ -465,8 +465,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "HotelPhobia",
-    "path": "HotelPhobia.yyp",
+    "name": "Menu System",
+    "path": "folders/Menu System.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_main_font",

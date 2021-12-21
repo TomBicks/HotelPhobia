@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "HotelPhobia",
-    "path": "HotelPhobia.yyp",
+    "name": "Menu System",
+    "path": "folders/Menu System.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_settings",
