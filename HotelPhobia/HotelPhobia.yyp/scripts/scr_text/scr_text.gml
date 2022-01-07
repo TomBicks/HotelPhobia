@@ -1,9 +1,11 @@
-/// @function						scr_text(text);
-/// @param {real}	sound_x			The X coordinate of the sound's location
-/// @param {real}	sound_y			The Y coordinate of the sound's location
-/// @param {real}	sound_radius	The radius in which the sound can be heard by zombies
-/// @param {id}		sound_effect	The sound to play for the event
-/// @description					Play a sound and attract zombies in a certain radius to the source
+/// @function					scr_text(text);
+/// @param {string}		text	The line to be added to the newly created page of text
+/// @description				Add a page of text
 function scr_text(_text) {
+
+//Add a page of text at the next page, just after the current 'page_total'
+text[page_total] = _text;
+//Thus, every time we add a page of text, it increases 'page_total' to reflect the new total of pages
+page_total++;
 
 }

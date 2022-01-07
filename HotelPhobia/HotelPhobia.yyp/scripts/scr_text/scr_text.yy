@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Menu System",
-    "path": "folders/Menu System.yy",
+    "name": "Textbox Functions",
+    "path": "folders/Menu System/Textbox Functions.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_text",

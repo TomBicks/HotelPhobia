@@ -1,5 +1,5 @@
 /// @description Insert description here
-#region //Textbox Properties
+#region //Textbox properties
 // Textbox Dimensions
 textbox_width = 172;
 textbox_height = 74;
