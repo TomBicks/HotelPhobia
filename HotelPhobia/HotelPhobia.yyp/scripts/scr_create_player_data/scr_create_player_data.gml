@@ -6,11 +6,11 @@
 function scr_create_player_data(_player_x, _player_y, _current_room) {
 
 #region //Create array and populate with player data
-	var _player_array = array_create(data_player.column_count, -1);
+var _player_array = array_create(data_player.column_count, -1);
 
-	_player_array[data_player.x] = _player_x;
-	_player_array[data_player.y] = _player_y;
-	_player_array[data_player.current_room] = _current_room;
+_player_array[data_player.x] = _player_x;
+_player_array[data_player.y] = _player_y;
+_player_array[data_player.current_room] = _current_room;
 #endregion
 
 return _player_array;

@@ -22,10 +22,8 @@ textbox_img_speed = 6/60; //NOTE!! Should get a macro to determine FPS like i ha
 page = 0;
 //The number of pages of dialogue (length of the text array)
 page_total = 0;
-#region //Text string array that stores multiple pages of dialogue
-text[0] = "Here's a test to see what happens.";
-text[1] = "Here's a second test to see what happens if we have a much longer string that maybe goes on for a bit too long but oh well that's why we call this a test.";
-#endregion
+//Text string array that stores multiple pages of dialogue (lines are defined through scr_text)
+text[0] = "";
 //Length of each page of dialogue
 text_length[0] = string_length(text[0]);
 //Dictates how many of the characters of the text are being drawn currently

@@ -10,4 +10,4 @@ if(!unlocked || target_room = -1) {
 	scr_room_transition_fade(target_room, target_x, target_y, 0.025, 0.025, c_black);
 }
 
-} 
+}

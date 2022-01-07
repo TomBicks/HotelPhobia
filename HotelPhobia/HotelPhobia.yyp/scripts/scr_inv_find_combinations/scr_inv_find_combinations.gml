@@ -4,15 +4,15 @@
 function scr_inv_find_combinations(_item_id) {
 
 #region //Return the list of item combinations for the item matching the given ID
-	var _combinations;
-	switch(_item_id) {
-		case(inv_items.can):
-			_combinations = inv_items.crowbar;
-			return(_combinations);
-		case(inv_items.crowbar):
-			_combinations = inv_items.can;
-			return(_combinations);
-	}
+var _combinations;
+switch(_item_id) {
+	case(inv_items.can):
+		_combinations = inv_items.crowbar;
+		return(_combinations);
+	case(inv_items.crowbar):
+		_combinations = inv_items.can;
+		return(_combinations);
+}
 #endregion
 
 }
