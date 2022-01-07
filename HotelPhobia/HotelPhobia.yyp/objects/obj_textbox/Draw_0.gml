@@ -11,10 +11,10 @@ if(!setup) {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
 	
-	//Loop through the pages
-	page_amount = array_length(text);
-	for(var p = 0; p < page_amount; p++) {
-		//Find how many characetrs are on ech page and store that number in the 'text_length' array
+	//Loop through the pages, where p is the page we are on
+	page_total = array_length(text);
+	for(var p = 0; p < page_total; p++) {
+		//Find how many characters are on each page and store that number in the 'text_length' array
 		text_length[p] = string_length(text[p]);
 		
 		//Get the x position for the textbox
@@ -24,7 +24,7 @@ if(!setup) {
 }
 #endregion
 
-#region//Typing the text
+#region //Typing the text
 if(draw_char < text_length[page]) {
 	//The faster the text speed, the faster the typewriter gets through the characters
 	draw_char += text_speed;
@@ -38,7 +38,7 @@ if(accept_key) {
 	//If typing is done
 	if(draw_char == text_length[page]) {
 		//If there is another page after this
-		if(page < page_amount-1) {
+		if(page < page_total-1) {
 			//Go to start of next page
 			page++;
 			draw_char = 0;
@@ -60,7 +60,7 @@ if(accept_key) {
 textbox_img_index += textbox_img_speed;
 textbox_spr_width = sprite_get_width(textbox_spr);
 textbox_spr_height = sprite_get_height(textbox_spr);
-//Draw back of the textbox (aniamted background and border)
+//Draw back of the textbox (animated background and border)
 draw_sprite_ext(textbox_spr, textbox_img_index, textbox_x + text_x_offset[page], textbox_y, textbox_width/textbox_spr_width, textbox_height/textbox_spr_height, 0, c_white, 1);
 #endregion
 

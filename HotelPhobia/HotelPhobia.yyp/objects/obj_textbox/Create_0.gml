@@ -5,15 +5,15 @@ textbox_width = 172;
 textbox_height = 74;
 // Space between options and menu border
 border = 8;
-// The separation between each line
+// The separation between each line horizontally
 line_sep = 12;
-// Width of the line between the borders (text must fit in this width, or move to the next)
+// Width of the line between the borders (text must fit in this width, or move to the next line)
 line_width = textbox_width - border*2;
 //Sprite of the textbox itself
 textbox_spr = spr_menu;
 //Image index of the textbox sprite
 textbox_img_index = 0;
-//Frames per second of the textbox sprite
+//Frames per second/animation speed of the textbox sprite/background
 textbox_img_speed = 6/60; //NOTE!! Should get a macro to determine FPS like i have before
 #endregion
 
@@ -21,7 +21,7 @@ textbox_img_speed = 6/60; //NOTE!! Should get a macro to determine FPS like i ha
 //What page of dialogue we are on
 page = 0;
 //The number of pages of dialogue (length of the text array)
-page_amount = 0;
+page_total = 0;
 #region //Text string array that stores multiple pages of dialogue
 text[0] = "Here's a test to see what happens.";
 text[1] = "Here's a second test to see what happens if we have a much longer string that maybe goes on for a bit too long but oh well that's why we call this a test.";
