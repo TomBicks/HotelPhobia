@@ -3,7 +3,7 @@
 // Textbox Dimensions
 textbox_width = 172;
 textbox_height = 74;
-// Space between options and menu border
+// Space between text and menu border vertically
 border = 8;
 // The separation between each line horizontally
 line_sep = 12;
@@ -30,6 +30,17 @@ text_length[0] = string_length(text[0]);
 draw_char = 0;
 //Speed at which the textbox typrwrites text
 text_speed = 1;
+#endregion
+
+#region //Options
+//List of text options during dialogue
+option[0] = "";
+//List of unique text ids that each option will lead towards, retrieving more dialogue
+option_link_id[0] = -1;
+//Position of currently selected option
+option_pos = 0;
+//Total number of options
+option_total = 0;
 #endregion
 
 //If setup has already been completed or not

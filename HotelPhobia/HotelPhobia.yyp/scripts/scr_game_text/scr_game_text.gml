@@ -8,7 +8,16 @@ switch(_text_id) {
 	case("npc 1"):
 		scr_text("Hi, I'm NPC 1!");
 		scr_text("Hopefully it all works out fine . . .");
-		scr_text("~It'd be a shame if it didn't. #feelsbadman");
+		scr_text("Do you think it will work?");
+			scr_option("Yes, I do.", "npc 1 - yes");
+			scr_option("No, not really.", "npc 1 - no");
+		break;
+	case("npc 1 - yes"):
+		scr_text("Yeah, I think it will too!");
+		break;
+	case("npc 1 - no"):
+		scr_text("Oh, well that's unfortunate.");
+		scr_text("I hope you end up changing your mind.");
 		break;
 	#endregion
 	#region //NPC 2
