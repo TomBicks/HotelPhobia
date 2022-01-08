@@ -68,17 +68,13 @@ draw_sprite_ext(textbox_spr, textbox_img_index, _textbox_x, _textbox_y, textbox_
 #region //Options
 //Draw the options if at the end of the dialogue
 if(draw_char == text_length[page] && page == page_total - 1) {
-	//The seperaton between each option horizontally
-	var _op_sep = 15;
-	// Space between options and option border vertically
-	var _op_border = 8;
 	for(var op = 0; op < option_total; op++) {
 		//Draw the option box
-		var _op_width = string_width(option[op]) + _op_border*2;
-		draw_sprite_ext(textbox_spr, textbox_img_index, _textbox_x + 16, _textbox_y - _op_sep*option_total + _op_sep*op, _op_width/textbox_spr_width, (_op_sep-1)/textbox_spr_height, 0, c_white, 1);
+		var _op_width = string_width(option[op]) + op_border*2;
+		draw_sprite_ext(textbox_spr, textbox_img_index, _textbox_x + 16, _textbox_y - op_sep*option_total + op_sep*op, _op_width/textbox_spr_width, (op_sep-1)/textbox_spr_height, 0, c_white, 1);
 		
 		//Draw the option text
-		draw_text(_textbox_x + 16 + _op_border, _textbox_y - _op_sep*option_total + _op_sep*op + 2, option[op]);
+		draw_text(_textbox_x + 16 + op_border, _textbox_y - op_sep*option_total + op_sep*op + 2, option[op]);
 	}
 }
 #endregion

@@ -41,6 +41,10 @@ option_link_id[0] = -1;
 option_pos = 0;
 //Total number of options
 option_total = 0;
+//Seperaton between each option horizontally
+op_sep = 15;
+//Space between options and option border vertically
+op_border = 8;
 #endregion
 
 //If setup has already been completed or not
