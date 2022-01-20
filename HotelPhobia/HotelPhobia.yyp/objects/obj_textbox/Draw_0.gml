@@ -44,6 +44,10 @@ if(accept_key) {
 		}
 		//If on last page
 		else {
+			//If an option link exists, create new textbox with selected option 
+			if(option_total > 0) {
+				scr_create_textbox(option_link_id[option_pos]);
+			}
 			//Destroy textbox, as dialogue is finished
 			instance_destroy();
 		}
@@ -69,9 +73,18 @@ draw_sprite_ext(textbox_spr, textbox_img_index, _textbox_x, _textbox_y, textbox_
 //Draw the options if at the end of the dialogue
 if(draw_char == text_length[page] && page == page_total - 1) {
 	for(var op = 0; op < option_total; op++) {
+		//Option Selection
+		option_pos += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+		option_pos = clamp(option_pos, 0, option_total-1);
+		
 		//Draw the option box
 		var _op_width = string_width(option[op]) + op_border*2;
 		draw_sprite_ext(textbox_spr, textbox_img_index, _textbox_x + 16, _textbox_y - op_sep*option_total + op_sep*op, _op_width/textbox_spr_width, (op_sep-1)/textbox_spr_height, 0, c_white, 1);
+		
+		//Draw the option selection arrow
+		if(option_pos == op) {
+			draw_sprite(spr_option_arrow, 0, _textbox_x, _textbox_y - op_sep*option_total + op_sep*op);
+		}
 		
 		//Draw the option text
 		draw_text(_textbox_x + 16 + op_border, _textbox_y - op_sep*option_total + op_sep*op + 2, option[op]);

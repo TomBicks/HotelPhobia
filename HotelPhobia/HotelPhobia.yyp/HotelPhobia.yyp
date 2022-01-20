@@ -37,6 +37,7 @@
     {"id":{"name":"scr_inv_add_item","path":"scripts/scr_inv_add_item/scr_inv_add_item.yy",},"order":1,},
     {"id":{"name":"scr_inv_find_description","path":"scripts/scr_inv_find_description/scr_inv_find_description.yy",},"order":3,},
     {"id":{"name":"scr_inv_find_combinations","path":"scripts/scr_inv_find_combinations/scr_inv_find_combinations.yy",},"order":5,},
+    {"id":{"name":"spr_option_arrow","path":"sprites/spr_option_arrow/spr_option_arrow.yy",},"order":9,},
     {"id":{"name":"example_script","path":"scripts/example_script/example_script.yy",},"order":7,},
     {"id":{"name":"scr_get_identifier","path":"scripts/scr_get_identifier/scr_get_identifier.yy",},"order":1,},
     {"id":{"name":"scr_create_player_data","path":"scripts/scr_create_player_data/scr_create_player_data.yy",},"order":3,},
