@@ -26,7 +26,16 @@ page_total = 0;
 text[0] = "";
 //Length of each page of dialogue
 text_length[0] = string_length(text[0]);
-//Dictates how many of the characters of the text are being drawn currently
+
+//Initialise arrays to store, for each text character, their...
+//...Value ("a", "+", "3", etc.
+char[0, 0] = "";
+//...x coordinate
+char_x[0, 0] = 0;
+//... and y coordinate
+char_y[0, 0] = 0;
+
+//Dictates how many of the characters of the text are being drawn currently, up to 'draw_char' characters inward
 draw_char = 0;
 //Speed at which the textbox typrwrites text
 text_speed = 1;
@@ -49,3 +58,10 @@ op_border = 8;
 
 //If setup has already been completed or not
 setup = false;
+
+#region //Effects???
+scr_set_text_defaults();
+//Keeps check off the last free space, i.e. where the last word ends
+//Used in conjunction with measuring the length of the words before it to see where a line break should go, i.e. at the last free sapce
+last_free_space = 0;
+#endregion

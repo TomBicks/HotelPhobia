@@ -19,6 +19,11 @@ if(!setup) {
 		//Get the x position for the textbox
 		//X coord if no character speaking
 		text_x_offset[p] = 0;
+		
+		//Setting individual characters and finding where the line breaks should go in the text
+		for(var c = 0; c < text_length[p]; c++) {
+			
+		}
 	}
 }
 #endregion
