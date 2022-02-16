@@ -22,7 +22,40 @@ if(!setup) {
 		
 		//Setting individual characters and finding where the line breaks should go in the text
 		for(var c = 0; c < text_length[p]; c++) {
+			//As string character position values start from 1 and not 0, this variable sets 'c' to the correct value for the desired character position
+			var _char_pos = c+1;
 			
+			//Store individual characters to the 'char' array
+			char[c, p] = string_char_at(text[p], _char_pos);
+			
+			 //Grab a copy of the line from the start up to '_char_pos'
+			var _text_up_to_char = string_copy(text[p], 1, _char_pos);
+			//Get current width of the line, excluding the character currently being looped through
+			var _current_text_width = string_width(_text_up_to_char) - string_width(char[c,p]);
+			
+			//Get the last free space (the +1 means the line break starts after the " " rather than before, so we don't get text sticking out on the new line)
+			if(char[c, p] == " ") { last_free_space = _char_pos+1; }
+			
+			//Get the line breaks (break if the width of the text in pixels, minus the current offset, is greater than the maximum line width)
+			if(_current_text_width - line_break_offset[p] > line_width) {
+				//If text goes over the line width, set the newest line break to be at the last free space
+				line_break_pos[line_break_total[p], p] = last_free_space;
+				//Increase value representing total number of line breaks, as we are adding a new one
+				line_break_total[p]++;
+				//String representing all text up to the last free space
+				var _text_up_to_last_free_space = string_copy(text[p], 1, last_free_space);
+				//String representing the last free space itself, so that we can remove it from the string before
+				var _last_free_space_string = string_char_at(text[p], last_free_space);
+				//Make the offset up to the end of the string which has been broken, excluding the last free space???
+				//SO how this works is that we go through a line until it's too long, then we break it
+				//When it gets broken, we store how long that string is before the line break so that we can
+				//check for the length of the next line, by checking against all the characters *after* the offset
+				//This is why we subtract the offset when determining if the string is too long
+				//For example, our first line could be too long at character 85; thus, offset becomes 84, as we exclude the last free space's character
+				//On the next iteration, with the new line starting from characters 85 onwards, we need to check
+				//if the line width + 85 is too long again. And so the cycle repeats.
+				line_break_offset[p] = string_width(_text_up_to_last_free_space) - string_width(_last_free_space_string);
+			}
 		}
 	}
 }

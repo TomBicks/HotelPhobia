@@ -3,9 +3,9 @@
 // Textbox Dimensions
 textbox_width = 172;
 textbox_height = 74;
-// Space between text and menu border vertically
+// Space between text and menu border horizontally
 border = 8;
-// The separation between each line horizontally
+// The separation between each line vertically
 line_sep = 12;
 // Width of the line between the borders (text must fit in this width, or move to the next line)
 line_width = textbox_width - border*2;
