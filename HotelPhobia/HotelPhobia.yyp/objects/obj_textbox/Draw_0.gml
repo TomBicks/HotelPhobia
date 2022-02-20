@@ -36,7 +36,7 @@ if(!setup) {
 			//Get the last free space (the +1 means the line break starts after the " " rather than before, so we don't get text sticking out on the new line)
 			if(char[c, p] == " ") { last_free_space = _char_pos+1; }
 			
-			//Get the line breaks (break if the width of the text in pixels, minus the current offset, is greater than the maximum line width)
+			#region //Get the line breaks (break if the width of the text in pixels, minus the previous offset, is greater than the maximum line width)
 			if(_current_text_width - line_break_offset[p] > line_width) {
 				//If text goes over the line width, set the newest line break to be at the last free space
 				line_break_pos[line_break_total[p], p] = last_free_space;
@@ -56,7 +56,40 @@ if(!setup) {
 				//if the line width + 85 is too long again. And so the cycle repeats.
 				line_break_offset[p] = string_width(_text_up_to_last_free_space) - string_width(_last_free_space_string);
 			}
+			#endregion
 		}
+		
+		#region //Getting each character's coordinates
+		
+		//NOTE!! WILL NEED TO GO OVER THE VIDEO AND ADD NOTES HERE; THERE'S A LOT GOING ON HERE!!
+		
+		for(var c = 0; c < text_length[p]; c++) {
+			var _char_pos = c+1;
+			var _txt_x = textbox_x + text_x_offset[p] + border;
+			var _txt_y = textbox_y + border;
+			
+			//Get current width of the line
+			var _txt_up_to_char = string_copy(text[p], 1, _char_pos);
+			var _current_text_width = string_width(_txt_up_to_char) - string_width(char[c, p]);
+			var _txt_line = 0; //The current line; used to multiply y coord if char is on lines beyond first
+			
+			//Compensate for string breaks
+			for(var lb = 0; lb < line_break_total[p]; lb++) {
+				//If the current character being looped through is after a line break
+				if(_char_pos >= line_break_pos[lb, p]) {
+					var _str_copy = string_copy(text[p], line_break_pos[lb, p], _char_pos - line_break_pos[lb, p]);
+					_current_text_width = string_width(_str_copy);
+					
+					//Record the "line" this should be on
+					_txt_line = lb+1; //+1 since lb starts at 0, but we don't want to multiply the y coord by 0; we want to start at 1
+				}
+			}
+			
+			//Add to the x and y coords of current character based on the new info from calculations
+			char_x[c, p] = _txt_x + _current_text_width;
+			char_y[c, p] = _txt_y + _txt_line * line_sep;
+		}
+		#endregion
 	}
 }
 #endregion
@@ -131,6 +164,10 @@ if(draw_char == text_length[page] && page == page_total - 1) {
 #endregion
 
 #region //Draw the text
-var _drawtext = string_copy(text[page], 1, draw_char);
-draw_text_ext(textbox_x + border, textbox_y + border, _drawtext, line_sep, line_width);
+//var _drawtext = string_copy(text[page], 1, draw_char);
+//draw_text_ext(textbox_x + border, textbox_y + border, _drawtext, line_sep, line_width);
+for(var c = 0; c < draw_char; c++) {
+	//Draw each character using the three arrays used to store the x & y coord and the string itself
+	draw_text(char_x[c, page], char_y[c, page], char[c, page]);
+}
 #endregion
