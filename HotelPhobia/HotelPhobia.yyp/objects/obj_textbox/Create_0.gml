@@ -9,8 +9,8 @@ border = 8;
 line_sep = 12;
 // Width of the line between the borders (text must fit in this width, or move to the next line)
 line_width = textbox_width - border*2;
-//Sprite of the textbox itself
-textbox_spr = spr_menu;
+//Sprite of the textbox itself; set as an array to enable use of different borders by different characters
+textbox_spr[0] = spr_menu;
 //Image index of the textbox sprite
 textbox_img_index = 0;
 //Frames per second/animation speed of the textbox sprite/background
@@ -59,9 +59,18 @@ op_border = 8;
 //If setup has already been completed or not
 setup = false;
 
-#region //Effects???
+//Sound
+//Delay between the plays of the typing sound effect
+snd_delay = 4; //This can be made into an array for multiple effects with unique delays
+//???
+snd_count = snd_delay;
+
+//Effects
 scr_set_text_defaults();
 //Keeps check off the last free space, i.e. where the last word ends
 //Used in conjunction with measuring the length of the words before it to see where a line break should go, i.e. at the last free sapce
 last_free_space = 0;
-#endregion
+//Duration of the pause by the textbox on fullstops, to emulate a character pausing after a sentence
+text_pause_duration = 16;
+//The timer itself, which is set to the value of 'text_pause_duration' on a fullstop and ticks down
+text_pause_timer = 0;

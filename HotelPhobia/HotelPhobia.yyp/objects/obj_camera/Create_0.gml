@@ -2,7 +2,8 @@
 #region //Determing initial window size and aspect ratio
 //Set initial ideal height of the window, e.g. 96 will display 96 pixels tall)
 view_width = 0;
-view_height = 96;
+//view_height = 96;
+view_height = 192;
 
 //The less this value the wider the screen
 aspect_ratio = display_get_width()/display_get_height();

@@ -17,8 +17,20 @@ if(!setup) {
 		text_length[p] = string_length(text[p]);
 		
 		//Get the x position for the textbox
+		//X coord if character on the left
+		text_x_offset[p] = 80;
+		portrait_x_offset[p] = 8;
+		
+		//X coord if character on the right
+		if(speaker_side[p] == -1) {
+			text_x_offset[p] = 8;
+			portrait_x_offset[p] = 216;
+		}
+		
 		//X coord if no character speaking
-		text_x_offset[p] = 0;
+		if(speaker_side[p] == noone) {
+			text_x_offset[p] = 44;
+		}
 		
 		//Setting individual characters and finding where the line breaks should go in the text
 		for(var c = 0; c < text_length[p]; c++) {
@@ -95,12 +107,38 @@ if(!setup) {
 #endregion
 
 #region //Typing the text
-if(draw_char < text_length[page]) {
-	//The faster the text speed, the faster the typewriter gets through the characters
-	draw_char += text_speed;
-	//Make sure 'draw_char' isn't negative or beyond the number of characters we have to draw
-	draw_char = clamp(draw_char,0,text_length[page]);
+//If the pause timer is at 0, resume typing as normal
+if(text_pause_timer <= 0) {
+	if(draw_char < text_length[page]) {
+		//The faster the text speed, the faster the typewriter gets through the characters
+		draw_char += text_speed;
+		//Make sure 'draw_char' isn't negative or beyond the number of characters we have to draw
+		draw_char = clamp(draw_char,0,text_length[page]);
+		var _check_char = string_char_at(text[page], draw_char);
+		if(_check_char == "." || _check_char == "?" || _check_char == "!" || _check_char == ",") {
+			text_pause_timer = text_pause_duration;
+			//Trigger typing sound (if not already making the typing noise, to avoid e.g. "I." making two noises)
+			if(!audio_is_playing(speaker_sound[page])) { 
+				audio_play_sound(speaker_sound[page], 8, false) 
+			}
+		}
+		else {
+			//typing sound effect
+			if(snd_count < snd_delay) {
+				snd_count++;
+			}
+			else {
+				snd_count = 0;
+				audio_play_sound(speaker_sound[page], 8, false);
+			}
+		}
+	}
+} 
+//Tick the pause timer down if it's still above 0
+else {
+	text_pause_timer--;
 }
+
 #endregion
 
 #region //Flip through pages
@@ -134,10 +172,28 @@ if(accept_key) {
 var _textbox_x = textbox_x + text_x_offset[page];
 var _textbox_y = textbox_y;
 textbox_img_index += textbox_img_speed;
-textbox_spr_width = sprite_get_width(textbox_spr);
-textbox_spr_height = sprite_get_height(textbox_spr);
+textbox_spr_width = sprite_get_width(textbox_spr[page]);
+textbox_spr_height = sprite_get_height(textbox_spr[page]);
+
+//Draw the speaker
+if(speaker_sprite[page] != noone) {
+	//Stop animating portrait if no longer typing text
+	if(draw_char == text_length[page]) { image_index = 0; }
+	
+	sprite_index = speaker_sprite[page];
+	var _speaker_x = textbox_x + portrait_x_offset[page];
+	//If portrait needs to be flipped, add back in width of the sprite to x coord, as origin will be flipped and it won't look right
+	if(speaker_side[page] == -1) {
+		_speaker_x += sprite_width;
+	}
+	//Draw the speaker border
+	draw_sprite_ext(textbox_spr[page], textbox_img_index, textbox_x + portrait_x_offset[page], textbox_y, sprite_width/textbox_spr_width, sprite_height/textbox_spr_height, 0, c_white, 1);
+	//Draw the speaker portrait
+	draw_sprite_ext(sprite_index, image_index, _speaker_x, textbox_y, speaker_side[page], 1, 0, c_white, 1);
+}
+
 //Draw back of the textbox (animated background and border)
-draw_sprite_ext(textbox_spr, textbox_img_index, _textbox_x, _textbox_y, textbox_width/textbox_spr_width, textbox_height/textbox_spr_height, 0, c_white, 1);
+draw_sprite_ext(textbox_spr[page], textbox_img_index, _textbox_x, _textbox_y, textbox_width/textbox_spr_width, textbox_height/textbox_spr_height, 0, c_white, 1);
 #endregion
 
 #region //Options
@@ -150,7 +206,7 @@ if(draw_char == text_length[page] && page == page_total - 1) {
 		
 		//Draw the option box
 		var _op_width = string_width(option[op]) + op_border*2;
-		draw_sprite_ext(textbox_spr, textbox_img_index, _textbox_x + 16, _textbox_y - op_sep*option_total + op_sep*op, _op_width/textbox_spr_width, (op_sep-1)/textbox_spr_height, 0, c_white, 1);
+		draw_sprite_ext(textbox_spr[page], textbox_img_index, _textbox_x + 16, _textbox_y - op_sep*option_total + op_sep*op, _op_width/textbox_spr_width, (op_sep-1)/textbox_spr_height, 0, c_white, 1);
 		
 		//Draw the option selection arrow
 		if(option_pos == op) {

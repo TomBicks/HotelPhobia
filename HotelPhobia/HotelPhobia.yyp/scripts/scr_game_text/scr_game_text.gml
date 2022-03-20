@@ -6,18 +6,19 @@ function scr_game_text(_text_id){
 switch(_text_id) {
 	#region //NPC 1
 	case("npc 1"):
-		scr_text("Hi, I'm NPC 1!");
-		scr_text("Hopefully it all works out fine . . .");
-		scr_text("Do you think it will work?");
+		scr_text("Hi, I'm NPC 1!", "cynthia");
+		scr_text("Hopefully it all works out fine . . .", "kim", -1);
+		scr_text("Do you think it will work?", "cynthia");
 			scr_option("Yes, I do.", "npc 1 - yes");
 			scr_option("No, not really.", "npc 1 - no");
 		break;
 	case("npc 1 - yes"):
-		scr_text("Yeah, I think it will too!");
+		scr_text("Yeah, I think it will too!", "cynthia");
+		scr_text("I doubt it. You're free to hope though...", "kim", -1);
 		break;
 	case("npc 1 - no"):
-		scr_text("Oh, well that's unfortunate.");
-		scr_text("I hope you end up changing your mind.");
+		scr_text("Oh, well that's unfortunate.", "kim", -1);
+		scr_text("I hope you end up changing your mind.", "cynthia");
 		break;
 	#endregion
 	#region //NPC 2
@@ -25,6 +26,7 @@ switch(_text_id) {
 		scr_text("Hi, I'm NPC 2!");
 		scr_text("Hopefully I work better than that other guy.");
 		scr_text("...Though I don't really mind either way. I think?");
+		scr_text("Then again, I could go on and on about how this very-much-so coding textbox can write really big; like ginomrous lines out.");
 		break;
 	#endregion
 	default:
