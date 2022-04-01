@@ -7,8 +7,11 @@ switch(_text_id) {
 	#region //NPC 1
 	case("npc 1"):
 		scr_text("Hi, I'm NPC 1!", "cynthia");
+			scr_text_colour(8, 12, c_blue, c_blue, c_blue, c_blue);
 		scr_text("Hopefully it all works out fine . . .", "kim", -1);
+			scr_text_float(0, 8);
 		scr_text("Do you think it will work?", "cynthia");
+			scr_text_shake(3,5);
 			scr_option("Yes, I do.", "npc 1 - yes");
 			scr_option("No, not really.", "npc 1 - no");
 		break;

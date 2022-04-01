@@ -62,7 +62,7 @@ setup = false;
 //Sound
 //Delay between the plays of the typing sound effect
 snd_delay = 4; //This can be made into an array for multiple effects with unique delays
-//???
+//The current time until the next typing sound effect can occur
 snd_count = snd_delay;
 
 //Effects

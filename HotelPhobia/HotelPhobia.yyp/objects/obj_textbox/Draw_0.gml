@@ -223,7 +223,30 @@ if(draw_char == text_length[page] && page == page_total - 1) {
 //var _drawtext = string_copy(text[page], 1, draw_char);
 //draw_text_ext(textbox_x + border, textbox_y + border, _drawtext, line_sep, line_width);
 for(var c = 0; c < draw_char; c++) {
-	//Draw each character using the three arrays used to store the x & y coord and the string itself
-	draw_text(char_x[c, page], char_y[c, page], char[c, page]);
+	//Floating text; increments 'float_dir' and returns y value of 'float_y' as though 'float_dir' is the x value on a sine graph
+	var _float_y = 0;
+	if(float_text[c, page] == true) {
+		float_dir[c, page] += -6;
+		_float_y = dsin(float_dir[c, page]);
+	}
+	
+	//Shaking text; picks a random degree and calculates the distance in x and y to put it '1' unit away
+	var _shake_x = 0;
+	var _shake_y = 0;
+	if(shake_text[c, page] == true) {
+		shake_timer[c, page]--;
+		if(shake_timer[c, page] <= 0) {
+			shake_timer[c, page] = irandom_range(4,8);
+			shake_dir[c, page] = irandom(360);
+		}
+		//Only change the characters position in the last 2 ticks of the 'shake_timer'
+		if(shake_timer[c, page] <= 2) {
+			_shake_x = lengthdir_x(1, shake_dir[c, page]);
+			_shake_y = lengthdir_y(1, shake_dir[c, page]);
+		}
+	}
+	
+	//Draw each character using the three arrays used to store the x & y coord and the string itself, including set colours
+	draw_text_colour(char_x[c, page] + _shake_x, char_y[c, page] + _float_y + _shake_y, char[c, page], colour_1[c, page], colour_2[c, page], colour_3[c, page],colour_4[c, page], 1);
 }
 #endregion
