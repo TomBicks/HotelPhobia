@@ -8,7 +8,7 @@ if(instance_exists(obj_interact_parent)) {
 			if(self.id == _nearby_interact) {
 				nearby = true;
 				if(keyboard_check_pressed(vk_up)) {
-					script_execute(behaviour);	
+					behaviour();	
 				}
 			} else {
 				nearby = false;
