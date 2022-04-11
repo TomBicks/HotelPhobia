@@ -1,0 +1,3 @@
+From the tutorials in using constructors and structs for inventory items and the benefits in being able to
+freely define their behaviour, using functions, I wonder if using this to create environmental objects like
+doors, lights and such would be beneficial.

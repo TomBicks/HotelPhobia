@@ -29,11 +29,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Old System",
-    "path": "folders/Inventory System/Old System.yy",
+    "name": "New System",
+    "path": "folders/Inventory System/New System.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_item",
+  "name": "obj_item_new",
   "tags": [],
   "resourceType": "GMObject",
 }

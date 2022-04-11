@@ -1,20 +1,14 @@
 {
-  "spriteId": {
-    "name": "spr_item_can",
-    "path": "sprites/spr_item_can/spr_item_can.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_interact_parent",
-    "path": "objects/obj_interact_parent/obj_interact_parent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -29,11 +23,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Old System",
-    "path": "folders/Inventory System/Old System.yy",
+    "name": "New System",
+    "path": "folders/Inventory System/New System.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_item",
+  "name": "obj_inv_manager_new",
   "tags": [],
   "resourceType": "GMObject",
 }

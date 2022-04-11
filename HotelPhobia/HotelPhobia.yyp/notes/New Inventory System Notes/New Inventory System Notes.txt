@@ -1,0 +1,11 @@
+-=- Picking Up Items -=-
+Picking up items will be defined by the item in the environment, which states what the object is and how
+much of it there is. If we do not have the item, the item is pushed to the inventory array. If we do already
+have it, the amount is increased by the amount stated by the pickup and no further of the item are pushed
+to the array.
+
+-=- Sorting Items -=-
+Sorting items will be accomplished by using each item's 'item_type'; a string used to categorise the
+different items. The complete array of items within the inventory will be searched through, adding any
+items that have a matching 'item_type' to the one being searched for to a new array, which will then be used
+to display the sorted items as we would displaying the complete inventory.

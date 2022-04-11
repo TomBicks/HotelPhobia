@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Inventory System",
-    "path": "folders/Inventory System.yy",
+    "name": "Old System",
+    "path": "folders/Inventory System/Old System.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_inv_manager",
