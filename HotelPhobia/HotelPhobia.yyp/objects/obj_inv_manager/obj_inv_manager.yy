@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Essential Objects",
-    "path": "folders/Objects/Essential Objects.yy",
+    "name": "Inventory System",
+    "path": "folders/Inventory System.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_inv_manager",

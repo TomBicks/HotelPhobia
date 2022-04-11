@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environmental Objects",
-    "path": "folders/Objects/Environmental Objects.yy",
+    "name": "Inventory System",
+    "path": "folders/Inventory System.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_item",
