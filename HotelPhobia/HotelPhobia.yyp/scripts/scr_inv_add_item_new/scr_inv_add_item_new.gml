@@ -1,40 +1,42 @@
-/// @function							scr_inv_add_item(item_id, item_amount);
-/// @param {integer}	item_id			The ID of the item to be added, corresponding to the number on the inv_items enumerator
-/// @param {string}		item_amount		The amount of the item to be added to the inventory
-/// @description						Adds an item to the inventory, then sorts it by ID
-function scr_inv_add_item_new(_item_id, _item_amount) {
+/// @function							scr_inv_add_item(item, added_amount);
+/// @param {integer}	item			...
+/// @param {string}		added_amount	The amount of the item to be added to the inventory
+/// @description						Adds an amount of an item to the inventory
+function scr_inv_add_item_new(_item, _added_amount) {
 
-#region //Check the grid for instances of the item or add it otherwise
-var _height = ds_grid_height(ds_inventory);
-for(i = 0; i < _height; i++) {
-	var _cell = ds_inventory[# 0, i];
-	
-	//If row found that matches the given item_id, the item is already in the inventory
-	//This means we only need to increase the amount of the item by item_amount
-	if(_cell == _item_id) {
-		ds_inventory[# 1, i] += _item_amount;
-		break;
-	}
-	
-	//If row found that is 99, means item is not in inventory
-	//This means we add the item to the first blank row we just found
-	if(_cell == inv_items.empty) {
-		//Add item ID
-		ds_inventory[# 0, i] = _item_id;
-		
-		//Add item amount
-		ds_inventory[# 1, i] = _item_amount;
-		
-		//Add item description
-		ds_inventory[# 2, i] = scr_inv_find_description(_item_id);
-		
-		//Add item combination list (if any)
-		ds_inventory[# 3, i] = scr_inv_find_combinations(_item_id);
-		
-		//Sort the grid's rows by ID so the item is in the correct position, in descending order
-		ds_grid_sort(ds_inventory, 0, true);
-		break;
-	}
+#region //Check if inventory manager can be accessed; return error if not
+if(object_exists(obj_inv_manager_new)) {
+	//Get reference to inventory
+	var _inventory = obj_inv_manager_new.inventory;
+}
+else {
+	show_error("ERROR: Inventory Manager cannot be accessed!", true);
+}
+#endregion
+
+#region //Check if the inventory already has the item being added
+var _item_index = -1;
+for(i = 0; i < array_length(_inventory); i++) {
+	//show_message(_inventory[i].name);
+	//Get index reference to the desired item; will stay -1 if not in inventory
+	if(_inventory[i].name == _item.name) { _item_index = i; }
+}
+#endregion
+
+#region //Add item/item's amount to the inventory
+//Add the 'added_amount' to the item's 'current_amount' in the inventory if it's there already
+if(_item_index != -1) {
+	var _current_amount = variable_struct_get(_inventory[_item_index], "amount");
+	variable_struct_set(_inventory[_item_index], "amount", _current_amount + _added_amount);
+}
+//Add the item to the inventory if none already exists
+else {
+	//Set the amount to reflect the amount to be added
+	/*NOTE: It seems using 'variable_struct_set' on this sets all of the struct, including 
+	in the global item_list, to the amount set, so to get around that we just set it here always*/
+	variable_struct_set(_item, "amount", _added_amount);
+	//Push the new item with set amount to the inventory array
+	array_push(_inventory, _item);
 }
 #endregion
 

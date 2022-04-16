@@ -12,7 +12,7 @@ enum item_types {
 function create_item(_name, _desc, _amount, _spr, _type, _effect) constructor {
 	name = _name;
 	description = _desc;
-	item_amount = _amount;
+	amount = _amount;
 	sprite = _spr;
 	item_type = _type;
 	item_effect = _effect;
@@ -42,4 +42,10 @@ global.item_list = {
 		}
 	)
 }
+#endregion
+
+#region //Create the inventory
+inventory = array_create(0);
+
+//array_push(inventory, global.item_list.can);
 #endregion
