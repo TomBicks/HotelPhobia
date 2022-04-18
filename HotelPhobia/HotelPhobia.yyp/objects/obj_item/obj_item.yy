@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_item_can",
-    "path": "sprites/spr_item_can/spr_item_can.yy",
+    "name": "spr_item_ground",
+    "path": "sprites/spr_item_ground/spr_item_ground.yy",
   },
   "solid": false,
   "visible": true,

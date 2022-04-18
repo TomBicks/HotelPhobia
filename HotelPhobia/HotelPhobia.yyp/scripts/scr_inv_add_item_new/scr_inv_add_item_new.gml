@@ -14,7 +14,7 @@ else {
 }
 #endregion
 
-#region //Check if the inventory already has the item being added
+#region //Check if the inventory already has the item to be added
 var _item_index = -1;
 for(i = 0; i < array_length(_inventory); i++) {
 	//show_message(_inventory[i].name);
