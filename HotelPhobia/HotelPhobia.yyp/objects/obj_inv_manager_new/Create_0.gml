@@ -19,6 +19,7 @@ function create_item(_name, _desc, _amount, _spr, _type, _effect) constructor {
 }
 
 #region //Create the item structs
+//NOTE!!!!!!!! NEED TO CHANGE SPRITE TO INSTEAD SPRITE INDEX, AS ALL THE SPRITES ARE IN ONE SPREADSHEET!!!
 global.item_list = {
 	can : new create_item(
 		"Can",
