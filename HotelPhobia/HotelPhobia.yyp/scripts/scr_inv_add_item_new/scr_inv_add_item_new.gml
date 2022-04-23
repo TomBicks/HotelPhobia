@@ -40,4 +40,8 @@ else {
 }
 #endregion
 
+//Sort arrary at end
+//show_message("Does this work?");
+array_sort(_inventory, scr_inv_sort);
+
 }
