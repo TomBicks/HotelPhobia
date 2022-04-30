@@ -1,38 +1,74 @@
-#region //Create and prepare the inventory ds_grid
-inventory_data = ds_grid_create(4, 7);
-
-/*Stored values (a row is a single item) are: 
- - ID (to sort lowest to highest)
- - item count
- - item description
- - items it could be combined with (e.g. inv_items.photo_piece1 would have here 
-   "inv_items.photo_piece2,inv_items.photo_piece3,inv_items.photo_piece4", which is effectively "12,13,14" as it uses ids
-*/
-
-//Fill grid with values of 99, as this will be the value to mean a cell is empty
-//This is so we can sort in ascending order properly
-ds_grid_clear(inventory_data, inv_items.empty);
-
-//Also, I can use ds_grid_write and ds_grid_read to save and load the invetory on exiting and running the game.
+/// @description Insert description here
+#region //Define item types/categories (enum for clarity)
+enum item_types {
+	none = 0,
+	consumable = 1,
+	key = 2,
+	note = 3
+}
 #endregion
 
-
-#region //Define inventory item enumerator
-/*ADDENDUM!! The ID can be done through an enumerator, for clarities sake; for example, can = 1, crowbar = 2, 
-key = 3, etc. What this means is I can type the "name" of the item, but it still reads to the code as 1, 2, 3 etc.*/
-//NOTE!! Enums are implicitly global, meaning if this is defined here, any object can reference it now
-enum inv_items {
-	//Consumables -- IDs 0 to ??
-	unknown = 0,
-	can = 1,
-	crowbar = 2,
-	key = 3,
-	battery = 4,
-	flashlight = 5,
-	keycard = 6,
-	note = 7,
-	//Key Items -- IDs ?? to ??
-	//Notes -- IDs ?? to ??
-	empty = 99
+//Define Item Constructor (used internally to ensure every item struct has the correct variables)
+function create_item(_name, _desc, _amount, _spr, _type, _effect) constructor {
+	name = _name;
+	description = _desc;
+	amount = _amount;
+	sprite = _spr;
+	item_type = _type;
+	item_effect = _effect;
 }
+
+#region //Create the item structs
+//NOTE!!!!!!!! NEED TO CHANGE SPRITE TO INSTEAD SPRITE INDEX, AS ALL THE SPRITES ARE IN ONE SPREADSHEET!!!
+global.item_list = {
+	can : new create_item(
+		"Can",
+		"What's inside?",
+		1,
+		spr_item_ground,
+		item_types.consumable,
+		function() {
+			show_message("Heal some health I guess.");
+		}
+	),
+	key : new create_item(
+		"Key",
+		"I wonder what it unlocks?",
+		1,
+		spr_item_ground,
+		item_types.key,
+		function() {
+			//Basically just check for a specific type of door here and it nearby unlock it
+			show_message("Unlocks the door it leads to.");
+		}
+	),
+	note1 : new create_item(
+		"Note 1",
+		"The first note.",
+		1,
+		spr_item_ground,
+		item_types.note,
+		function() {
+			//Spawn a textbox and read out the note
+			show_message("This is the first note of x amount.");
+		}
+	),
+	note2 : new create_item(
+		"Note 2",
+		"The second note.",
+		1,
+		spr_item_ground,
+		item_types.note,
+		function() {
+			//Spawn a textbox and read out the note
+			show_message("This is the second note of x amount.");
+		}
+	)
+}
+#endregion
+
+#region //Create the inventory
+inventory = array_create(0);
+
+//array_push(inventory, global.item_list.can);
 #endregion

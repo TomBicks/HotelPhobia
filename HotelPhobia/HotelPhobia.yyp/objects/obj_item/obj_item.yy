@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Old System",
-    "path": "folders/Inventory System/Old System.yy",
+    "name": "Inventory System",
+    "path": "folders/Inventory System.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_item",
