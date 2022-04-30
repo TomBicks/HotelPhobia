@@ -1,8 +1,8 @@
-/// @function							scr_inv_add_item(item, added_amount);
+/// @function							scr_inv_item_add(item, added_amount);
 /// @param {integer}	item			...
 /// @param {string}		added_amount	The amount of the item to be added to the inventory
 /// @description						Adds an amount of an item to the inventory
-function scr_inv_add_item(_item, _added_amount) {
+function scr_inv_item_add(_item, _added_amount) {
 
 #region //Check if inventory manager can be accessed; return error if not
 if(object_exists(obj_inv_manager)) {

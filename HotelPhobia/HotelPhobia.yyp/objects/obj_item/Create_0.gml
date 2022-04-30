@@ -12,7 +12,7 @@ behaviour = function scr_item_pickup_new() {
 	audio_play_sound(snd_pickup_item, 0, false);
 
 	//Add item to inventory
-	scr_inv_add_item(item, item_amount);
+	scr_inv_item_add(item, item_amount);
 	
 	//Destroy item object after pickup
 	instance_destroy(self, false);
