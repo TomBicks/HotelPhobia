@@ -1,4 +1,8 @@
 /// @description Insert description here
+#region //Define initial variables
+show_inventory = false; //Whether or not the inventory is being drawn and responds to interaction
+#endregion
+
 #region //Define item types/categories (enum for clarity)
 enum item_types {
 	none = 0,
@@ -9,13 +13,14 @@ enum item_types {
 #endregion
 
 //Define Item Constructor (used internally to ensure every item struct has the correct variables)
-function create_item(_name, _desc, _amount, _spr, _type, _effect) constructor {
-	name = _name;
-	description = _desc;
-	amount = _amount;
-	sprite = _spr;
-	item_type = _type;
-	item_effect = _effect;
+function create_item(_name, _desc, _amount, _ground_spr_index, _inv_spr_index, _type, _effect) constructor {
+	name = _name; //Displayed name of the item
+	description = _desc; //Displayed description of the item
+	amount = _amount; //Displayed amount of the item the player has
+	ground_sprite_index = _ground_spr_index; //The image index of the sprite used to showcase the item on the ground
+	inventory_sprite_index = _inv_spr_index; //The image index of the sprite used to showcase the item in the inventory
+	item_type = _type; //The category of item, used to filter by category in inventory
+	item_effect = _effect; //A function attached to the item to trigger upon attempting to 'use' the item
 }
 
 #region //Create the item structs
@@ -25,7 +30,8 @@ global.item_list = {
 		"Can",
 		"What's inside?",
 		1,
-		spr_item_ground,
+		1,
+		1,
 		item_types.consumable,
 		function() {
 			show_message("Heal some health I guess.");
@@ -35,7 +41,8 @@ global.item_list = {
 		"Key",
 		"I wonder what it unlocks?",
 		1,
-		spr_item_ground,
+		2,
+		2,
 		item_types.key,
 		function() {
 			//Basically just check for a specific type of door here and it nearby unlock it
@@ -46,7 +53,8 @@ global.item_list = {
 		"Note 1",
 		"The first note.",
 		1,
-		spr_item_ground,
+		3,
+		3,
 		item_types.note,
 		function() {
 			//Spawn a textbox and read out the note
@@ -57,7 +65,8 @@ global.item_list = {
 		"Note 2",
 		"The second note.",
 		1,
-		spr_item_ground,
+		3,
+		3,
 		item_types.note,
 		function() {
 			//Spawn a textbox and read out the note
