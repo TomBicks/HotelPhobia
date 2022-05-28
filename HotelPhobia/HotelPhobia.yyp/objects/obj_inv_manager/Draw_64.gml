@@ -10,5 +10,4 @@ if(show_inventory) {
 	for(i = 0; i < array_length(inventory); i++) {
 		draw_sprite_ext(spr_item_inv, inventory[i].inventory_sprite_index, 0, 100 + i*60, 3, 3, 0, c_white, 1);
 	}
-	
 }
