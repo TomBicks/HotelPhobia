@@ -1,5 +1,9 @@
 /// @description Insert description here
 #region //Define initial variables
+//Width & Height of the Inventory Area
+inv_width = 60;
+inv_height = 360;
+
 show_inventory = false; //Whether or not the inventory is being drawn and responds to interaction
 #endregion
 
