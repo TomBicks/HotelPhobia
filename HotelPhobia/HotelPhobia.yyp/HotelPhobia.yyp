@@ -58,6 +58,7 @@
     {"id":{"name":"obj_interact_parent","path":"objects/obj_interact_parent/obj_interact_parent.yy",},"order":1,},
     {"id":{"name":"obj_light_switch","path":"objects/obj_light_switch/obj_light_switch.yy",},"order":2,},
     {"id":{"name":"obj_control_config","path":"objects/obj_control_config/obj_control_config.yy",},"order":6,},
+    {"id":{"name":"Object Creation Order","path":"notes/Object Creation Order/Object Creation Order.yy",},"order":1,},
     {"id":{"name":"scr_text_colour","path":"scripts/scr_text_colour/scr_text_colour.yy",},"order":5,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_light_parent","path":"objects/obj_light_parent/obj_light_parent.yy",},"order":1,},

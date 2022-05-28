@@ -1,10 +1,19 @@
 /// @description Insert description here
 #region //Define initial variables
-//Width & Height of the Inventory Area
+//Width & Height of the inventory area
 inv_width = 60;
 inv_height = 360;
 
-show_inventory = false; //Whether or not the inventory is being drawn and responds to interaction
+//Width & Height of an inventory slot (both use the same measurement
+slot_width = 50;
+//Space between inventory slot and the left edge of the inventory
+border = 5;
+//Seperation between each inventory slot
+slot_sep = 10;
+//Initial
+
+//Whether or not the inventory is being drawn and responds to interaction
+show_inventory = false;
 #endregion
 
 #region //Define item types/categories (enum for clarity)

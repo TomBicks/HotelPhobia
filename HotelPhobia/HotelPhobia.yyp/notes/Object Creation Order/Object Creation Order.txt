@@ -1,0 +1,8 @@
+Camera sets application surface, so it has to do this before inventory manager gets created, as it
+needs the application surface to be set before it can set its GUI variables correctly
+This should be alleviated if the initial 'setting' room is used, whereby a nothing room is used at
+start to initiate the camera and settings and everything else and then instantly moves on to the main menu
+
+The camera is not dependant on the player existing before it, as it does nothing if it cannot find
+the player, but doesn't crash
+

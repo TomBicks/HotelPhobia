@@ -25,4 +25,8 @@ if(show_inventory) {
 	for(i = 0; i < array_length(inventory); i++) {
 		draw_sprite_ext(spr_item_inv, inventory[i].inventory_sprite_index, _gui_width-inv_width + 6, _gui_height/2 - inv_height/2 + 6 + 54*i, 3, 3, 0, c_white, 1);
 	}
+	
+	//Draw reticle showcasing which item is currently selected
+	//NOTE!! draw rectangle using the same code as drawing the inventory slots rectangles above, just with a specific 'i' and an outline
+	//draw_rectangle()
 }
