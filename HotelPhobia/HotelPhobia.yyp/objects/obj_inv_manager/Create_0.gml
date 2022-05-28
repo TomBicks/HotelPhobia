@@ -1,8 +1,15 @@
 /// @description Insert description here
 #region //Define initial variables
+//Width & Height of the GUI surface
+gui_width = display_get_gui_width();
+gui_height = display_get_gui_height();
+
 //Width & Height of the inventory area
 inv_width = 60;
 inv_height = 360;
+//X & Y of the inventory area
+inv_x = gui_width - inv_width;
+inv_y = gui_height/2 - inv_height/2;
 
 //Width & Height of an inventory slot (both use the same measurement
 slot_width = 50;
