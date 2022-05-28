@@ -24,7 +24,6 @@ function create_item(_name, _desc, _amount, _ground_spr_index, _inv_spr_index, _
 }
 
 #region //Create the item structs
-//NOTE!!!!!!!! NEED TO CHANGE SPRITE TO INSTEAD SPRITE INDEX, AS ALL THE SPRITES ARE IN ONE SPREADSHEET!!!
 global.item_list = {
 	can : new create_item(
 		"Can",
