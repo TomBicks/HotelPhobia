@@ -1,4 +1,5 @@
 /// @description Insert description here
+//show_message("Inv Draw GUI " + string(display_get_gui_width()));
 if(show_inventory) {
 	//DEBUG!! Drawing items as text lists
 	draw_set_color(c_black);

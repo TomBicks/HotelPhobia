@@ -14,8 +14,6 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_data_manager","path":"objects/obj_data_manager/obj_data_manager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":0.0,"resourceVersion":"1.0","name":"inst_69ACF304","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_69C1FD6A","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":32.0,"resourceVersion":"1.0","name":"inst_33594DDC","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_light_switch","path":"objects/obj_light_switch/obj_light_switch.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":92.0,"y":58.0,"resourceVersion":"1.0","name":"inst_4596F8BE","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_light_parent","path":"objects/obj_light_parent/obj_light_parent.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":89.0,"y":0.0,"resourceVersion":"1.0","name":"inst_1EAA03F1","tags":[],"resourceType":"GMRInstance",},
@@ -30,8 +28,6 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_33594DDC","path":"rooms/rm_apartment_test_1/rm_apartment_test_1.yy",},
-    {"name":"inst_69C1FD6A","path":"rooms/rm_apartment_test_1/rm_apartment_test_1.yy",},
-    {"name":"inst_69ACF304","path":"rooms/rm_apartment_test_1/rm_apartment_test_1.yy",},
     {"name":"inst_50771E1B","path":"rooms/rm_apartment_test_1/rm_apartment_test_1.yy",},
     {"name":"inst_1EAA03F1","path":"rooms/rm_apartment_test_1/rm_apartment_test_1.yy",},
     {"name":"inst_2699CC63","path":"rooms/rm_apartment_test_1/rm_apartment_test_1.yy",},

@@ -1,4 +1,5 @@
 /// @description Initialise variables
+//TUTORIAL: https://youtu.be/_g1LQ6aIJFk
 #region //Determing initial window size and aspect ratio
 //Set initial ideal height of the window, e.g. 96 will display 96 pixels tall)
 view_width = 0;
