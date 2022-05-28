@@ -15,12 +15,12 @@ if(show_inventory) {
 	//Draw inventory slot backgrounds
 	draw_set_color(c_ltgray)
 	for(i = 0; i < 6; i++) {
-		draw_rectangle(inv_x + 6, inv_y + 6 + 54*i, gui_width - 6, inv_y + 54 + 54*i, false);
+		draw_rectangle(inv_x + border, inv_y + border + (slot_height+slot_sep)*i, gui_width - border, inv_y + slot_height + border + (slot_height+slot_sep)*i, false);
 	}
 	
 	//Draw items' sprites in inventory
 	for(i = 0; i < array_length(inventory); i++) {
-		draw_sprite_ext(spr_item_inv, inventory[i].inventory_sprite_index, inv_x + 6, inv_y + 6 + 54*i, 3, 3, 0, c_white, 1);
+		draw_sprite_ext(spr_item_inv, inventory[i].inventory_sprite_index, inv_x + border, inv_y + border + (slot_height+slot_sep)*i, 3, 3, 0, c_white, 1);
 	}
 	
 	//Draw reticle showcasing which item is currently selected

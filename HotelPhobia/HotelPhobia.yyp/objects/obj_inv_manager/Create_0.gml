@@ -11,12 +11,13 @@ inv_height = 360;
 inv_x = gui_width - inv_width;
 inv_y = gui_height/2 - inv_height/2;
 
-//Width & Height of an inventory slot (both use the same measurement
-slot_width = 50;
+//Width & Height of an inventory slot
+slot_width = 48;
+slot_height = 48;
 //Space between inventory slot and the left edge of the inventory
-border = 5;
+border = 6;
 //Seperation between each inventory slot
-slot_sep = 10;
+slot_sep = 12;
 //Initial
 
 //Whether or not the inventory is being drawn and responds to interaction
