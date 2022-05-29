@@ -25,5 +25,6 @@ if(show_inventory) {
 	
 	//Draw reticle showcasing which item is currently selected
 	//NOTE!! draw rectangle using the same code as drawing the inventory slots rectangles above, just with a specific 'i' and an outline
-	//draw_rectangle()
+	draw_set_color(c_orange);
+	draw_rectangle(inv_x + border, inv_y + border + (slot_height+slot_sep)*(slot_selected_visual-1), gui_width - border, inv_y + slot_height + border + (slot_height+slot_sep)*(slot_selected_visual-1), true);
 }

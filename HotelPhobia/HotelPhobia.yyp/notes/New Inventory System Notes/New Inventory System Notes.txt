@@ -9,3 +9,8 @@ Sorting items will be accomplished by using each item's 'item_type'; a string us
 different items. The complete array of items within the inventory will be searched through, adding any
 items that have a matching 'item_type' to the one being searched for to a new array, which will then be used
 to display the sorted items as we would displaying the complete inventory.
+
+-=- Navigating Inventory -=-
+If the player holds up or down arrows to navigate through the inventory slots, it will move one slot, as per
+key pressed, but a timer will also begin. If the player is still holding down the arrow key by the time the
+timer triggers, it will start rapidly moving through the slots, much like a modern ivnentory system does.

@@ -20,6 +20,12 @@ border = 6;
 slot_sep = 12;
 //Initial
 
+//The visible inventory slot selected (1 through 6; this does not represent the index of the item in the inventory's array)
+slot_selected_visual = 1;
+//The actual inventory slot selected (represents the index of the item in the inventory's array)
+//UNSURE IF I NEED THIS!!
+//slot_selected_actual = 1;
+
 //Whether or not the inventory is being drawn and responds to interaction
 show_inventory = false;
 #endregion
