@@ -1,6 +1,6 @@
 /// @description Insert description here
 //NOTE!! Assuming 6 is the max number of slots
-clamp(slot_selected_visual++,1,6);
+slot_selected_visual = clamp(slot_selected_visual + 1,1,6);
 
 /*//Test 1
 //If current visual slot is the last slot of the UI...

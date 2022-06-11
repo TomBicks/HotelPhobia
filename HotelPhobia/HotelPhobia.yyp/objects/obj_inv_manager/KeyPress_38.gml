@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-clamp(slot_selected_visual--,1,6);
+slot_selected_visual = clamp(slot_selected_visual - 1,1,6);
