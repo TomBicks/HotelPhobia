@@ -1,11 +1,10 @@
 /// @description Insert description here
 //show_message("Inv Draw GUI " + string(display_get_gui_width()));
-if(show_inventory) {
+if(inv_offset < inv_width) {
 	//DEBUG!! Drawing items as text lists
 	draw_set_color(c_black);
 	for(i = 0; i < array_length(inventory); i++) {
-		draw_text(0, 15*i, "Name: " + string(inventory[i].name) + ", Amount: " + string(inventory[i].amount)
-		+ ", Item Type: " + string(inventory[i].item_type));
+		draw_text(0, 15*i, "Name: " + string(inventory[i].name) + ", Amount: " + string(inventory[i].amount) + ", Item Type: " + string(inventory[i].item_type));
 	}
 	
 	//Draw inventory background
@@ -15,7 +14,7 @@ if(show_inventory) {
 	//Draw inventory slot backgrounds
 	draw_set_color(c_ltgray)
 	for(i = 0; i < 6; i++) {
-		draw_rectangle(inv_x + border, inv_y + border + (slot_height+slot_sep)*i, gui_width - border, inv_y + slot_height + border + (slot_height+slot_sep)*i, false);
+		draw_rectangle(inv_x + border, inv_y + border + (slot_height+slot_sep)*i, inv_x + border + slot_width, inv_y + border + slot_height + (slot_height+slot_sep)*i, false);
 	}
 	
 	//Draw items' sprites in inventory
@@ -26,5 +25,5 @@ if(show_inventory) {
 	//Draw reticle showcasing which item is currently selected
 	//NOTE!! draw rectangle using the same code as drawing the inventory slots rectangles above, just with a specific 'i' and an outline
 	draw_set_color(c_orange);
-	draw_rectangle(inv_x + border, inv_y + border + (slot_height+slot_sep)*(slot_selected_visual-1), gui_width - border, inv_y + slot_height + border + (slot_height+slot_sep)*(slot_selected_visual-1), true);
+	draw_rectangle(inv_x + border, inv_y + border + (slot_height+slot_sep)*(slot_selected_visual-1), inv_x + border + slot_width, inv_y + slot_height + border + (slot_height+slot_sep)*(slot_selected_visual-1), true);
 }

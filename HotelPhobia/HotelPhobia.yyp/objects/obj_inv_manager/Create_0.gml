@@ -23,11 +23,14 @@ slot_sep = 12;
 //The visible inventory slot selected (1 through 6; this does not represent the index of the item in the inventory's array)
 slot_selected_visual = 1;
 //The actual inventory slot selected (represents the index of the item in the inventory's array)
-//UNSURE IF I NEED THIS!!
-//slot_selected_actual = 1;
+slot_selected_actual = 1;
 
 //Whether or not the inventory is being drawn and responds to interaction
 show_inventory = false;
+//The offset of the ivnentory from the right side of the screen; matching 'inv_width' means it is completely off the screen; 0 means it is completely visible
+inv_offset = inv_width;
+//The speed the inventory slides to and from the side of the screen when toggled
+offset_speed = 2;
 #endregion
 
 #region //Define item types/categories (enum for clarity)
